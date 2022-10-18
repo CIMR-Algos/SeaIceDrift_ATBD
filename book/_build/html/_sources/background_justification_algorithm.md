@@ -62,6 +62,19 @@ resolution and the lack of intensity patterns to track from one image to the nex
 large variability across the polar sea-ice and is stable over the tracking window of 0,5 to 2 days). This ATBD thus focus on Ku and Ka imagery but leaves
 the door open for later inclusion of at least C and X.
 
+## Exploitation of the forward and backward scan
+
+In the past (e.g. {cite:t}`haarpaintner:2006:qscat-drift,kwok:1998:ssmi85-drift,girard-ardhuin:2012:drift`, among others), one sea-ice motion vector field would have been processed
+for each microwave channel as input, i.e. one vector field from the Ku-H band, one from Ku-V, etc... the different vector fields would then be merged together a-posteriori.
+
+{cite:t}`lavergne:2010:cmcc-jgr` introduced a different approach where a single sea-ice drift motion field is processed in one go from all the available imagery channels. This *implicit* merging
+it implemented at the core of the motion tracking algorithm, by solving for the maximum value of the sum of the cross-correlation of several imagery channels, instead of just one imagery channel.
+
+For CIMR, this can be further extended by considering the imagery from *forward* and *backward* scans as independent imaging channels. There are thus two images with Ku-H, two with Ku-V, etc... in
+total eight imaging channels for each swath. When doing sea-ice motion tracking with CIMR, one can thus do an implicit merging with 16 pairs of images (fwd-fwd, fwd-bck, bck-fwd, and fwd-bck) for each of
+Ku-V, Ku-H, Ka-V, and Ka-H. It is expected that using the forward and backward scans as part of the implicit merging will be benefitial to reduce the retrieval uncertainty and limit the number of
+rogue vectors. This will have to be validated in the product development phase since CIMR is the first passive microwave mission offering full scans for sea-ice motion tracking.
+
 ## Swath-to-swath Motion Tracking (Level-2 strategy)
 
 One of the key characteristics of the CIMR Level-2 sea-ice drift product is that it will be a "swath-to-swath" product, thus computed at the intersection of individual swaths. {numref}`fig_s2s` illustrates the concept.
