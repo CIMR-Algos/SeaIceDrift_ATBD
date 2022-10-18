@@ -361,11 +361,21 @@ be expressed as the following maximisation problem:
 
 $$
 \max_{(x,y)\in\mathcal{D}} \rho(x,y,\delta_x,\delta_y)
-$$ (eq_maxim)
+$$ (eq_maximonech)
 
 which is solved at all grid positions where the motion vector is searched for (see previous step). Each optimisation is conducted independently
-from the others. $\mathcal{D}$ is a validity domain for $(\delta_x,\delta_y)$. Eq. {eq}`eq_maxim` thus defines a two dimensional optimisation
+from the others. $\mathcal{D}$ is a validity domain for $(\delta_x,\delta_y)$. Eq. {eq}`eq_maximonech` thus defines a two dimensional optimisation
 problem with domain constraint.
+
+Eq. {eq}`eq_maximonech` is valid for one pair of images. In the CIMR sea-ice drift algorithm, we however envision not one pair of (start, end) images but 16 pairs
+(fwd-fwd, fwd-bck, bck-fwd, and fwd-bck) for each of Ku-V, Ku-H, Ka-V, and Ka-H considering the foward and backward scans as separate images. Following {cite:t}`lavergne:2010:cmcc-jgr`
+we implement an inplicit merging of the information content of the 16 imaging channels by maximizing a sum of cross-correlation functions:
+
+$$
+\max_{(x,y)\in\mathcal{D}} \frac{1}{N_{ch}} \sum_{c=1}^{c=N_{ch}} \rho^{c}(x,y,\delta_x,\delta_y)
+$$ (eq_maxim)
+
+where $N_{ch}$ is the number of channels ($N_{ch} = 16$).
 
 Eq. {eq}`eq_maxim` is solved by the Nelder Mead algorithm {cite:p}`nelder:1968:original`. This algorithm is
 chosen since it is simple to implement and does not require computing the gradients of the function to be minimized. It furthermore has good convergence
@@ -421,10 +431,10 @@ can be made arbitrarily close to the Heaviside step function, yet
 remaining smooth and continuous.
 
 Eq. {eq}`eq_penalising` illustrate how the penalty is applied to the correlation function
-$\rho(x,y,\delta_x,\delta_y)$.
+$\rho^c(x,y,\delta_x,\delta_y)$ (Eq. {eq}`eq_maxim`).
 
 $$
-\rho_D(x,y,\delta_x,\delta_y) = (\rho(x,y,\delta_x,\delta_y) + 1) \times W(d(x_c,y_c;\delta_x,\delta_y)) - 1
+\rho^c_D(x,y,\delta_x,\delta_y) = (\rho^c(x,y,\delta_x,\delta_y) + 1) \times W(d(x_c,y_c;\delta_x,\delta_y)) - 1
 $$ (eq_penalising)
 
 {numref}`fig_sigmoids` plots a mono-dimensional example of applying a sigmoid penalty function
