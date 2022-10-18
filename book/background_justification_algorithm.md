@@ -64,6 +64,16 @@ the door open for later inclusion of at least C and X.
 
 ## Swath-to-swath Motion Tracking (Level-2 strategy)
 
+One of the key characteristics of the CIMR Level-2 sea-ice drift product is that it will be a "swath-to-swath" product, thus computed at the intersection of individual swaths. {numref}`fig_s2s` illustrates the concept.
+
+```{figure} ./static_imgs/swath_to_swath.png
+--- 
+name: fig_s2s
+width: 75%
+---
+(a) Daily average map of AMSR2 36.5 GHz V-pol TB on 1 December 2019 (greys) for the Arctic and two individual gridded swaths on the same day (blues: 01:16:34 UTC; reds: 19:24:55 UTC). The sea-ice region of overlap between the two swaths is highlighted in greens and is where S2S drift vectors can be computed. (b) Similar but for the Antarctic on 15 August 2019 (blues: 01:43:45 UTC; reds: 16:31:28 UTC). Reproduced from {cite:p}`lavergne:2021:s2s`.
+```
+
 The advantages of choosing a swath-to-swath approach (instead of a daily L3 product) are presented in {cite:t}`lavergne:2021:s2s`. We reproduce their conclusions below:
 
 ```{epigraph}
