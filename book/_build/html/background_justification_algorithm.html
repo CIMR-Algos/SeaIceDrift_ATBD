@@ -140,33 +140,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="algorithm_input_output_data_definition.html">
-   Algorithm Input and Output Data Definition (IODD)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="algorithm_performance_assessment.html">
-   Algorithm Performance Assessment (Version 2 ATBD)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebook comments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Python notebook placeholder
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="references.html">
-   References (example)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="annex.html">
-   Annex
+   References
   </a>
  </li>
 </ul>
@@ -370,7 +345,12 @@ the door open for later inclusion of at least C and X.</p>
 </div>
 <div class="section" id="swath-to-swath-motion-tracking-level-2-strategy">
 <h2>Swath-to-swath Motion Tracking (Level-2 strategy)<a class="headerlink" href="#swath-to-swath-motion-tracking-level-2-strategy" title="Permalink to this headline">¶</a></h2>
-<p>The advantages of choosing a swath-to-swath approach (instead of a daily L3 product) are presented in <span id="id9">Lavergne <em>et al.</em> [<a class="reference internal" href="references.html#id19" title="T. Lavergne, M. Piñol Solé, E. Down, and C. Donlon. Towards a swath-to-swath sea-ice drift product for the copernicus imaging microwave radiometer mission. The Cryosphere, 15(8):3681–3698, 2021. URL: https://tc.copernicus.org/articles/15/3681/2021/, doi:10.5194/tc-15-3681-2021.">2021</a>]</span>. We reproduce their conclusions below:</p>
+<p>One of the key characteristics of the CIMR Level-2 sea-ice drift product is that it will be a “swath-to-swath” product, thus computed at the intersection of individual swaths. <a class="reference internal" href="#fig-s2s"><span class="std std-numref">Fig. 2</span></a> illustrates the concept.</p>
+<div class="figure align-default" id="fig-s2s">
+<a class="reference internal image-reference" href="_images/swath_to_swath.png"><img alt="_images/swath_to_swath.png" src="_images/swath_to_swath.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">(a) Daily average map of AMSR2 36.5 GHz V-pol TB on 1 December 2019 (greys) for the Arctic and two individual gridded swaths on the same day (blues: 01:16:34 UTC; reds: 19:24:55 UTC). The sea-ice region of overlap between the two swaths is highlighted in greens and is where S2S drift vectors can be computed. (b) Similar but for the Antarctic on 15 August 2019 (blues: 01:43:45 UTC; reds: 16:31:28 UTC). Reproduced from <span id="id9">[<a class="reference internal" href="references.html#id19" title="T. Lavergne, M. Piñol Solé, E. Down, and C. Donlon. Towards a swath-to-swath sea-ice drift product for the copernicus imaging microwave radiometer mission. The Cryosphere, 15(8):3681–3698, 2021. URL: https://tc.copernicus.org/articles/15/3681/2021/, doi:10.5194/tc-15-3681-2021.">Lavergne <em>et al.</em>, 2021</a>]</span>.</span><a class="headerlink" href="#fig-s2s" title="Permalink to this image">¶</a></p>
+</div>
+<p>The advantages of choosing a swath-to-swath approach (instead of a daily L3 product) are presented in <span id="id10">Lavergne <em>et al.</em> [<a class="reference internal" href="references.html#id19" title="T. Lavergne, M. Piñol Solé, E. Down, and C. Donlon. Towards a swath-to-swath sea-ice drift product for the copernicus imaging microwave radiometer mission. The Cryosphere, 15(8):3681–3698, 2021. URL: https://tc.copernicus.org/articles/15/3681/2021/, doi:10.5194/tc-15-3681-2021.">2021</a>]</span>. We reproduce their conclusions below:</p>
 <blockquote class="epigraph">
 <div><p>We investigate the feasibility and impact of adopting a swath-to-swath (S2S) vs. daily map (DM) framework for the processing of sea-ice motion from modern passive microwave satellite missions such as JAXA’s AMSR2 in preparation for the future CIMR mission. We find that S2S sea-ice drift vectors obtained from AMSR2 imagery are more accurate than the corresponding DM vectors when compared to GPS trajectories from on-ice buoys in both the Arctic and Antarctic. An S2S configuration also results in many more drift vectors on a daily basis: the number varies with latitude and depends on the orbital and swath characteristics of the satellite mission. Since S2S drift vectors can be prepared for each new incoming swath, this configuration yields much better timeliness, which is beneficial for several operational applications such as support to navigation and short-term sea-ice forecasting. One potential limitation to the S2S configuration is that it is more sensitive to inaccurate geolocation, especially if the geolocation errors are systematic (e.g. a shift in the flight direction).</p>
 <p>As far the CIMR mission is concerned, we recommend the adoption of an S2S configuration for the Level-2 sea-ice drift product in the operational ground segment. Considering the microwave frequency channels, target spatial resolution, swath width and geolocation accuracy specified for the CIMR imagery, its Level-2 sea-ice drift product will allow for unprecedented spatial resolution, coverage and accuracy for a microwave radiometer mission. Several other new characteristics of the CIMR mission (e.g. the relatively high spatial resolution at 6.9 and 10.8 GHz, the backward and forward scans) will also contribute to an enhanced sea-ice drift product, but this requires further research.</p>
