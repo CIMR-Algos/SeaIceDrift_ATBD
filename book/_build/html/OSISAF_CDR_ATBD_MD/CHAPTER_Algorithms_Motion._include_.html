@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notations &#8212; CIMR L2 Sea Ice Drift ATBD</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CIMR L2 Sea Ice Drift ATBD</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   CIMR L2 Sea Ice Drift ATBD
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../abstract.html">
+   Abstract
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../applicable_ref_docs.html">
+   Applicable and Reference Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../acronyms.html">
+   Acronyms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../definitions.html">
+   Definitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction_purpose_scope.html">
+   Introduction, purpose and scope
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../background_justification_algorithm.html">
+   Background and justification of selected algorithm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../L2_product_definition.html">
+   Level-2 product definition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../baseline_algorithm_definition.html">
+   Baseline Algorithm Definition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algorithm_input_output_data_definition.html">
+   Algorithm Input and Output Data Definition (IODD)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algorithm_performance_assessment.html">
+   Algorithm Performance Assessment (Version 2 ATBD)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../markdown-notebooks.html">
+   Notebook comments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notebooks.html">
+   Python notebook placeholder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   References (example)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../annex.html">
+   Annex
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/OSISAF_CDR_ATBD_MD/CHAPTER_Algorithms_Motion._include_.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CIMR-Algos/ATBD-Template"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Notations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-the-fly-computation-of-virtual-sub-images">
+   On the fly computation of
+   <em>
+    virtual
+   </em>
+   sub-images
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maximisation-of-rho-x-y-delta-x-delta-y">
+   Maximisation of
+   <span class="math notranslate nohighlight">
+    \(\rho(x,y,\delta_x,\delta_y)\)
+   </span>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation">
+     Initialisation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical-convergence-test">
+     Numerical convergence test
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation-of-the-validity-domain-mathcal-d">
+   Implementation of the validity domain
+   <span class="math notranslate nohighlight">
+    \(\mathcal{D}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uncertainties-based-on-validation-statistics-sec-motion-uncertvalstat">
+   Uncertainties based on validation statistics {#sec:motion:uncertvalstat}
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Notations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Notations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-the-fly-computation-of-virtual-sub-images">
+   On the fly computation of
+   <em>
+    virtual
+   </em>
+   sub-images
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maximisation-of-rho-x-y-delta-x-delta-y">
+   Maximisation of
+   <span class="math notranslate nohighlight">
+    \(\rho(x,y,\delta_x,\delta_y)\)
+   </span>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialisation">
+     Initialisation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical-convergence-test">
+     Numerical convergence test
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation-of-the-validity-domain-mathcal-d">
+   Implementation of the validity domain
+   <span class="math notranslate nohighlight">
+    \(\mathcal{D}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uncertainties-based-on-validation-statistics-sec-motion-uncertvalstat">
+   Uncertainties based on validation statistics {#sec:motion:uncertvalstat}
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p>[]{#chap:motion label=”chap:motion”}</p>
+<p>[]{#sec:motion:intro label=”sec:motion:intro”}</p>
+<p>As for many other motion
+tracking methods applied in geophysics
+([&#64;nsidc:1998:drift-summary; &#64;notarstefano:2007:sst-motion]), sea ice
+drift is tracked from a pair of images, with a block-based strategy.
+Each block (<em>feature</em>, <em>sub-image</em>, …) is composed of a limited
+ensemble of pixels from the first image (the <em>reference</em> block) and
+centred at a tracking location, for which the most similar block in the
+second image (the <em>candidate</em> block) is looked for. The degree of
+similarity is assessed by a metric, which often is the correlation
+coefficient between the reference and candidate blocks. The maximum
+correlation indicates the best match and the two-dimensional offset
+between the centre points of the two blocks is the drift vector.</p>
+<p>The description given above applies to the well known
+[mcc]{acronym-label=”mcc” acronym-form=”singular+short”} (Maximum Cross
+Correlation) technique which has been successfully applied by many
+investigators
+([&#64;ninnis:1986:avhrr-drift; &#64;emery:1991:avhrr-drift; &#64;kwok:1998:ssmi85-drift; &#64;haarpaintner:2006:qscat-drift; &#64;notarstefano:2007:sst-motion; &#64;schmetz:1993:meteosat-wind],
+among others). In the MCC, wthe search for the best candidate block is
+<em>discrete</em> and <em>exhaustive</em>. Discrete since the offsets between the
+centre points are in whole number of pixels and exhaustive because all
+candidate blocks are evaluated before the best can be chosen.</p>
+<p>The same description applies to the [cmcc]{acronym-label=”cmcc”
+acronym-form=”singular+short”} (Continuous Maximum Cross Correlation)
+method [&#64;lavergne:2010:cmcc-jgr]. CMCC is the strategy developed and
+implemented for the low resolution sea ice drift product of the .
+Conversely to the MCC, the search for the best candidate vector is
+performed in a continuous manner over the two-dimensional plane and, as
+a consequence, the search algorithm is not exhaustive.</p>
+<p>Although more complex to implement and, by nature, potentially less
+robust than the MCC technique, the CMCC has the advantage of removing
+the <em>quantization noise</em> which has hindered the retrieval of smooth
+motion vector fields when the time span between the images is shortened
+([&#64;ezraty:2007:amsr-pum; &#64;haarpaintner:2006:qscat-drift; &#64;kwok:1998:ssmi85-drift]).</p>
+<p>In the following sections, the motion tracking algorithm is further
+described. It consists in three steps:</p>
+<ul class="simple">
+<li><p>selection of tracking locations and preliminary screening ();</p></li>
+<li><p>block based maximisation of the correlation metric via the CMCC ();</p></li>
+<li><p>filtering and correction step ().</p></li>
+</ul>
+<p>Finally, describes the approach to providing per grid-cell
+uncertainties.</p>
+<p>[]{#sec:motion:selection label=”sec:motion:selection”} The start
+locations for the drift arrows, the tracking locations, are distributed
+over 75 km EASE2 grids (). The spacing is 6 times coarser than 12.5 km
+image grids, so that each grid point in the 75 km grid falls exactly
+every 6 grid point of the 12.5 km grids.</p>
+<p>Both a nominal and a reduced block shape can be activated. The nominal
+blocks approach a circular area of 137.5 km diameter : they are squares
+with 11x11 pixels sides from which 3 grid cells are removed at the four
+corners. The reduced blocks are squares with 62.5 km side (5x5 pixels).</p>
+<p>As in [&#64;haarpaintner:2006:qscat-drift], the reduced block is used close
+to the ice edge, the coastline or an area with missing satellite data.
+The aim is to try and estimate ice drift vectors also in these
+situations. The reduced block is always used in place of the nominal
+one, not at the same time.</p>
+<p>Before any motion vector is retrieved, a screening algorithm browses
+through all the start locations on the 75 km grid and filters away all
+grid points which do not qualify for motion extraction (e.g. over land,
+over the ocean, etc…). In the process, the shape of the block that is
+to be used (nominal or reduced) is decided upon for each drift location.</p>
+<p>Each step of the screening process is applied on the list of drift
+locations that passed all the previous steps. In the event where no grid
+points are left after one of the screening steps, the motion processing
+is skipped for that location. The first step is applied to the list of
+all the drift locations from the 62.5 km grid.</p>
+<p>Masking of land pixel (step 1)</p>
+<p>:   Blocks whose centre pixel is over land are discarded;</p>
+<p>Masking of pixels with not enough ice (step 2)</p>
+<p>:   The start and stop blocks of the two ice masks are loaded. Discard
+the grid locations whose blocks are not totally over ice.</p>
+<p>Masking of pixels with missing data (step 3)</p>
+<p>:   The start and stop blocks of the Laplacian images are loaded.
+Discard the grid locations whose blocks hold missing data.</p>
+<p>Detailed flow charts for each step are given in .</p>
+<p>Start locations that are not discarded are passed on to the motion
+tracking processing, along with the information on which block shape to
+use for each of them.</p>
+<p>[]{#sec:motion:cmcc label=”sec:motion:cmcc”}</p>
+<div class="section" id="notations">
+<h1>Notations<a class="headerlink" href="#notations" title="Permalink to this headline">¶</a></h1>
+<p>We note <span class="math notranslate nohighlight">\(\mathcal{L}_0(x,y)[i]\)</span> the <span class="math notranslate nohighlight">\(i^{th}\)</span> pixel of the <em>start</em>
+sub-image centred at point <span class="math notranslate nohighlight">\((x,y)\)</span>, extracted from the <span class="math notranslate nohighlight">\(\mathcal{L}_0\)</span>
+image. <span class="math notranslate nohighlight">\((x,y)\)</span> are the coordinates expressed in the underpinning
+projection, see .</p>
+<p>The total number of pixels <span class="math notranslate nohighlight">\(N\)</span> in a sub-image depends on the block
+shape, for the nominal blocks <span class="math notranslate nohighlight">\(N_n = 109\)</span>, for the reduced blocks
+<span class="math notranslate nohighlight">\(N_r = 25\)</span>.</p>
+<p>The mean and standard deviation values for a given sub-image are:
+$<span class="math notranslate nohighlight">\(\begin{aligned}
+\langle \mathcal{L}_0(x,y) \rangle &amp; = &amp; \frac{1}{N} \sum_{i=1}^{N} \mathcal{L}_0(x,y)[i] \nonumber \\
+\sigma ( \mathcal{L}_0(x,y) ) &amp; = &amp; \sqrt{\langle \mathcal{L}^2_0(x,y) \rangle - \langle \mathcal{L}_0(x,y) \rangle^2}  \nonumber\end{aligned}\)</span><span class="math notranslate nohighlight">\(
+Similar values can be computed for a *stop* sub-image centred at
+\)</span>(u,v)<span class="math notranslate nohighlight">\(: \)</span>\langle \mathcal{L}_1(u,v) \rangle<span class="math notranslate nohighlight">\( and
+\)</span>\sigma ( \mathcal{L}_1(u,v) )$.</p>
+<p>As introduced in , the match between a start and a stop sub-image is
+evaluated via the correlation metric: $<span class="math notranslate nohighlight">\(\rho(x,y,\delta_x,\delta_y) =
+\frac{
+\sum_{i=1}^{N} (\mathcal{L}_0(x,y)[i]-\langle \mathcal{L}_0(x,y) \rangle) (\mathcal{L}_1(x+\delta_x,y+\delta_y)[i]-\langle \mathcal{L}_1(x+\delta_x,y+\delta_y) \rangle)
+}{\sigma ( \mathcal{L}_0(x,y) ) \sigma ( \mathcal{L}_1(x+\delta_x,y+\delta_y) )}
+\label{eq:correl}\)</span><span class="math notranslate nohighlight">\( By construction, \)</span>\rho(x,y,\delta_x,\delta_y)<span class="math notranslate nohighlight">\( takes
+values between \)</span>-1<span class="math notranslate nohighlight">\( and \)</span>+1<span class="math notranslate nohighlight">\(. High values indicate a good match between
+the sub-images. This is further interpreted as having found the offsets
+\)</span>\delta_x = u - x<span class="math notranslate nohighlight">\( and \)</span>\delta_y = v - y<span class="math notranslate nohighlight">\( which best explain the local
+change in intensity between the two sub-images. \)</span>(\delta_x,\delta_y)$ is
+the drift vector.</p>
+</div>
+<div class="section" id="on-the-fly-computation-of-virtual-sub-images">
+<h1>On the fly computation of <em>virtual</em> sub-images<a class="headerlink" href="#on-the-fly-computation-of-virtual-sub-images" title="Permalink to this headline">¶</a></h1>
+<p>Pixels of the candidate block <span class="math notranslate nohighlight">\(\mathcal{L}_1(x+\delta_x,y+\delta_y)\)</span> are
+computed from bi-linear interpolations of the pixels of <span class="math notranslate nohighlight">\(\mathcal{L}_1\)</span>.
+For example, <span class="math notranslate nohighlight">\(\mathcal{L}_1(u,v)[i]\)</span> is given by: $<span class="math notranslate nohighlight">\(\begin{split}
+\mathcal{L}_1(u,v)[i] &amp; = (1 - \epsilon_{u}) \times (1 - \epsilon_{v}) \times \mathcal{L}_1(\bar{u},\bar{v})[i] \\
+        &amp;+  (1 - \epsilon_{u}) \times \epsilon_{v} \times  \mathcal{L}_1(\bar{u},\bar{v}+s_{v})[i] \\
+        &amp;+ \epsilon_{u} \times (1 - \epsilon_{v}) \times  \mathcal{L}_1(\bar{u}+s_{u},\bar{v})[i] \\
+        &amp;+ \epsilon_{u} \times \epsilon_{v} \times \mathcal{L}_1(\bar{u}+s_{u},\bar{v}+s_{v})[i]
+\end{split}
+\label{eq:img_interp}\)</span><span class="math notranslate nohighlight">\( where \)</span><span class="math notranslate nohighlight">\(\begin{aligned}
+\bar{t} &amp; = &amp; \operatorname{Trunc}(t) \\
+\epsilon_t &amp; = &amp; |t - \bar{t}| \\
+s_t        &amp; = &amp; \frac{t}{|t|}\end{aligned}\)</span><span class="math notranslate nohighlight">\( For example, for \)</span>t=-2.8<span class="math notranslate nohighlight">\(,
+\)</span>\bar{t}=-2<span class="math notranslate nohighlight">\(, \)</span>\epsilon_t=0.8<span class="math notranslate nohighlight">\( and \)</span>s_t=-1<span class="math notranslate nohighlight">\(. permits computing *virtual*
+sub-images at continuously varying centre points \)</span>(u,v)$ and thus
+building a continuous optimisation framework to the estimation of motion
+vectors from a pair of images.</p>
+<p>Finding the motion vector <span class="math notranslate nohighlight">\((\delta_x,\delta_y)\)</span> at position <span class="math notranslate nohighlight">\((x,y)\)</span> can
+be expressed as the following maximisation problem:
+$<span class="math notranslate nohighlight">\(\max_{(x,y)\in\mathcal{D}} \rho(x,y,\delta_x,\delta_y)
+\label{eq:maxim}\)</span><span class="math notranslate nohighlight">\( which is solved at all \)</span>(x,y)<span class="math notranslate nohighlight">\( points the motion
+vector is searched for. Each optimisation is conducted independently
+from the others. \)</span>\mathcal{D}<span class="math notranslate nohighlight">\( is a validity domain for
+\)</span>(\delta_x,\delta_y)$. thus defines a two dimensional optimisation
+problem with domain constraint.</p>
+</div>
+<div class="section" id="maximisation-of-rho-x-y-delta-x-delta-y">
+<h1>Maximisation of <span class="math notranslate nohighlight">\(\rho(x,y,\delta_x,\delta_y)\)</span><a class="headerlink" href="#maximisation-of-rho-x-y-delta-x-delta-y" title="Permalink to this headline">¶</a></h1>
+<p>is solved by the Nelder Mead algorithm
+([&#64;nelder:1968:original; &#64;Lagarias:1998:neldermead]). This algorithm was
+chosen since it is simple to implement and does not require computing
+the derivatives. It furthermore has good convergence and computational
+properties in problems with low dimensionality.</p>
+<div class="section" id="initialisation">
+<h2>Initialisation<a class="headerlink" href="#initialisation" title="Permalink to this headline">¶</a></h2>
+<p>Starting points for the optimisation are sampled on a length-angle
+regular grid around point <span class="math notranslate nohighlight">\((0,0)\)</span> as on .</p>
+<p><img alt="image" src="OSISAF_CDR_ATBD_MD/data/FigStartPoints/startpoints" />{width=”50%”}
+[]{#fig:startpoints label=”fig:startpoints”}</p>
+<p>The length increment is set to <span class="math notranslate nohighlight">\(10\)</span>km and the angular increment to
+<span class="math notranslate nohighlight">\(45^{\circ}\)</span>. The circle has radius <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>, the maximum drift
+distance defining <span class="math notranslate nohighlight">\(\mathcal{D}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\rho(x,y,\delta_x,\delta_y)\)</span> is computed at each of those points and
+the best 3 vertexes are kept for initialising the Nelder Mead
+optimisation.</p>
+</div>
+<div class="section" id="numerical-convergence-test">
+<h2>Numerical convergence test<a class="headerlink" href="#numerical-convergence-test" title="Permalink to this headline">¶</a></h2>
+<p>Termination and convergence is tested upon via a relative difference of
+function values at the current <em>best</em> and <em>worst</em> vertexes, <span class="math notranslate nohighlight">\(f_b\)</span> and
+<span class="math notranslate nohighlight">\(f_w\)</span>. Specifically, the algorithm is said to converge if and only if
+<span class="math notranslate nohighlight">\(| f_b - f_w | &lt; (f_b + f_w) \times \tau + \epsilon\)</span>, with <span class="math notranslate nohighlight">\(\tau\)</span> and
+<span class="math notranslate nohighlight">\(\epsilon\)</span> small and positive floating point values. As a safeguard, the
+maximum number of iterations is set to 1000. No convergence test is
+performed on the size and shape of the final simplex.</p>
+</div>
+</div>
+<div class="section" id="implementation-of-the-validity-domain-mathcal-d">
+<h1>Implementation of the validity domain <span class="math notranslate nohighlight">\(\mathcal{D}\)</span><a class="headerlink" href="#implementation-of-the-validity-domain-mathcal-d" title="Permalink to this headline">¶</a></h1>
+<p><span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is a disc shaped domain expressing the <em>a-priori</em>
+knowledge we bring to the optimisation problem. Its purpose is to limit
+the search area for the solution vector during the optimisation process.
+It is defined by a centre point <span class="math notranslate nohighlight">\((x_c,y_c)\)</span> and radius <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>.
+$<span class="math notranslate nohighlight">\((\delta_x,\delta_y) \in \mathcal{D}_{x_c,y_c} \Leftrightarrow d(x_c,y_c;\delta_x,\delta_y) &lt; \mathbf{L}
+\label{eq:domain}\)</span><span class="math notranslate nohighlight">\( In , \)</span>d(x_c,y_c;\delta_x,\delta_y)<span class="math notranslate nohighlight">\( is the distance
+(along the Earth surface) between the centre point of \)</span>\mathcal{D}<span class="math notranslate nohighlight">\( and
+the tip of the drift vector \)</span>(\delta_x,\delta_y)<span class="math notranslate nohighlight">\( (see ). \)</span>(x_c,y_c)<span class="math notranslate nohighlight">\(
+represents our best *a-priori* knowledge at the time of performing the
+optimisation. It is initially set to \)</span>(0,0)$.</p>
+<p>cannot be used <em>as is</em> in the optimisation routine since it leads to
+abrupt and non-linear behaviour. <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is instead implemented as
+a <em>soft</em> constraint based on a mono-dimensional sigmoid function <span class="math notranslate nohighlight">\(W(d)\)</span>:
+$<span class="math notranslate nohighlight">\(W(d)   = \frac{1}{1 + e^{k(d - \mathbf{L})}} 
+\label{eq:sigmoid}\)</span><span class="math notranslate nohighlight">\( In , \)</span>k<span class="math notranslate nohighlight">\( is a parameter controlling the steepness
+of the sigmoid around the cut-off value \)</span>\mathbf{L}<span class="math notranslate nohighlight">\(. By construction,
+\)</span>W(\mathbf{L}) = 0.5<span class="math notranslate nohighlight">\(. By using a large enough value for \)</span>k<span class="math notranslate nohighlight">\(, the \)</span>W$
+can be made arbitrarily close to the Heaviside step function, yet
+remaining smooth and continuous.</p>
+<p>and illustrate how the penalty is applied to the correlation function
+<span class="math notranslate nohighlight">\(\rho(x,y,\delta_x,\delta_y)\)</span>.
+$<span class="math notranslate nohighlight">\(\rho_D(x,y,\delta_x,\delta_y) = (\rho(x,y,\delta_x,\delta_y) + 1) \times W(d(x_c,y_c;\delta_x,\delta_y)) - 1
+\label{eq:penalising}\)</span>$</p>
+<p>plots a mono-dimensional example of applying a sigmoid penalty function
+to a synthetic correlation function. Evaluations for <span class="math notranslate nohighlight">\(x\)</span> lower than L
+are dominated by the correlation value <span class="math notranslate nohighlight">\(\rho(x)\)</span> while those occurring
+outside the domain (<span class="math notranslate nohighlight">\(x\)</span> larger than <span class="math notranslate nohighlight">\(L\)</span>) return very bad scores, that is
+close to <span class="math notranslate nohighlight">\(-1\)</span>.</p>
+<p><img alt="image" src="OSISAF_CDR_ATBD_MD/data/FigSigmoid/sigmoids" />{width=”.9\textwidth”}
+[]{#fig:sigmoids label=”fig:sigmoids”}</p>
+<p>In , <span class="math notranslate nohighlight">\(\rho_D\)</span> is the penalised correlation function. Finding the maximum
+of <span class="math notranslate nohighlight">\(\rho_D\)</span> is taken as a proxy for solving the original, constrained,
+optimisation problem of . <span class="math notranslate nohighlight">\(\rho_D\)</span> is the functional entering the Nelder
+Mead algorithm.</p>
+<p>It is customary to compute <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> as a maximum expected velocity
+<span class="math notranslate nohighlight">\(v_{max}\)</span>, multiplied by the time separation between the two images
+<span class="math notranslate nohighlight">\(\mathbf{D}_1\)</span> - <span class="math notranslate nohighlight">\(\mathbf{D}_0\)</span>. <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> is thus the maximum
+expected straight-line distance that can be covered in the given time.</p>
+<p>For OSI/̄455, <span class="math notranslate nohighlight">\(\mathbf{D}_1\)</span> - <span class="math notranslate nohighlight">\(\mathbf{D}_0\)</span> is 1 day, and <span class="math notranslate nohighlight">\(v_{max}\)</span> is
+<span class="math notranslate nohighlight">\(0.45 m.s^{-1}\)</span>. In reality, individual ice floes can be recorded with
+higher hourly velocities in dynamic areas, however <span class="math notranslate nohighlight">\(v_{max}\)</span> corresponds
+to a max speed averaged over 24 hours, and a spatial extent of
+approximately 100 km. This value of <span class="math notranslate nohighlight">\(v_{max}\)</span> is a compromise between
+allowing very long drift distances, controlling computation time, and
+the number of erroneous vectors (see section below).</p>
+<p>[]{#sec:motion:filtering label=”sec:motion:filtering”}
+Once the motion
+tracking processing described above has been applied to each of the
+start position selected by the preliminary checks in , a filtering step
+is taken to correct or remove obviously erroneous vectors.</p>
+<p>Causes for those erroneous vectors include:</p>
+<ol class="simple">
+<li><p>convergence of the Nelder Mead algorithm in a local (non-global)
+maximum;</p></li>
+<li><p>noise in the sub-images;</p></li>
+<li><p>edge effects in the sub-images.</p></li>
+</ol>
+<p>Whatever the reason be, the filtering step we implement is based on the
+distance from individual displacement vectors to the average of its
+neighbouring vectors. If this distance is less than a fixed threshold,
+the displacement vector being tested is validated and another vector is
+tested upon. Otherwise, a new motion tracking optimisation is triggered.
+The Nelder Mead algorithm is initialised and run like in the previous
+section, except that the validity domain <span class="math notranslate nohighlight">\(\mathbf{D}\)</span> is adapted (center
+and radius) to translate the new constraint.</p>
+<p>Let <span class="math notranslate nohighlight">\(\Delta_{\textrm{avg}}\)</span> be the distance between the tip of the
+current drift vector <span class="math notranslate nohighlight">\((\delta_x,\delta_y)\)</span> and the tip of the zonal
+average drift vector
+<span class="math notranslate nohighlight">\((\delta^{\textrm{avg}}_x,\delta^{\textrm{avg}}_y)\)</span>. The average drift
+vector is computed from the 8 neighbouring drift vectors, that is the 8
+closest vectors <em>not including the current one</em>. The local <span class="math notranslate nohighlight">\(\mathbf{D}\)</span>
+domain is then the disc with centre
+<span class="math notranslate nohighlight">\((\delta^{\textrm{avg}}_x,\delta^{\textrm{avg}}_y)\)</span> and radius
+<span class="math notranslate nohighlight">\(\Delta^{\textrm{avg}}_{\textrm{max}}\)</span>. In the current implementation,
+<span class="math notranslate nohighlight">\(\Delta^{\textrm{avg}}_{\textrm{max}}\)</span> is set to <span class="math notranslate nohighlight">\(10\)</span>km. Neighbouring
+vectors with a maximum correlation value of less than <span class="math notranslate nohighlight">\(0.5\)</span> are not
+used, to avoid degrading the average drift field with possibly wrong
+estimates.</p>
+<p><img alt="image" src="OSISAF_CDR_ATBD_MD/data/FigFiltering/filter" />{width=”.5\textwidth”}
+[]{#fig:filtering label=”fig:filtering”}</p>
+<p>illustrates a typical case where a single erroneous vector is surrounded
+by a smooth vector field. Since the central estimate is not used in the
+average, isolated wrong vectors stand out very easily in terms of
+<span class="math notranslate nohighlight">\(\Delta_{\textrm{avg}}\)</span>.</p>
+<p>During this second optimisation, the search for the maximum is limited
+to the area eclosed by the red circle. If a satisfying maximum
+correlation is found inside <span class="math notranslate nohighlight">\(\mathbf{D}\)</span> it is kept and the surrounding
+average vectors are immediately updated, as well as each
+<span class="math notranslate nohighlight">\(\Delta_{\textrm{avg}}\)</span> lengths. If the constrained optimisation does
+not converge or if the new vector does not have a good enough maximum
+correlation value, both the old and new vectors are discarded and the
+average vectors, as well as <span class="math notranslate nohighlight">\(\Delta_{\textrm{avg}}\)</span> at the neighbouring
+locations are updated.</p>
+<p>Although the method described above works in many cases, it sometimes
+fail when several erroneous vectors are close one to each other. This
+happens especially when noise dominates the signal in a large region of
+one of the image. If the case, the order in which the vectors are
+corrected has an influence on the final efficiency for the filtering.</p>
+<p>To minimize this influence, motion vectors are first sorted from the
+largest to the shortest <span class="math notranslate nohighlight">\(\Delta_{\textrm{avg}}\)</span> and the filtering is
+applied to the vector exhibiting the worst of those distances. Since,
+changing a vector has an influence on its direct neighbours, the sorting
+is repeated after each correction. A mechanism is put in place to avoid
+falling into an infinite loop. This strategy also ensures that the good
+vectors around an erroneous estimate are not modified before the latter
+is actually processed through the filter ().</p>
+<p>[]{#sec:motion:uncert label=”sec:motion:uncert”}</p>
+<p>To provide physically-based uncertainties on a per grid cell basis is an
+effort for many if not all remote sensing products. In the field of ice
+motion remote sensing, recent progress have been made for example by
+[&#64;sumata:2014:icedrift_uncert], [&#64;sumata:2015:icedrift_uncert_summer],
+[&#64;sumata:2015:uncert_vs_SAR] or [&#64;hollands:2014:icedrift_uncert_sar],
+but so far no ice motion product comes with per-grid cell uncertainty
+derived from uncertainty propagation.</p>
+<p>Following our approach with the NRT sea-ice drift product OSI/̄405, we
+provide uncertainties for each drift vector based on statistics obtained
+from the validation against buoy trajectories, supplemented by a
+dependency on the departure of the <em>start</em> time of each drift vector ()
+to the daily central time .</p>
+</div>
+<div class="section" id="uncertainties-based-on-validation-statistics-sec-motion-uncertvalstat">
+<h1>Uncertainties based on validation statistics {#sec:motion:uncertvalstat}<a class="headerlink" href="#uncertainties-based-on-validation-statistics-sec-motion-uncertvalstat" title="Permalink to this headline">¶</a></h1>
+<p>We base our single/̄sensor uncertainties on the statistics obtained from
+validating the drift vectors against buoy trajectories. These validation
+statistics are different for each sensor and are binned with the value
+of <code class="docutils literal notranslate"><span class="pre">status_flag</span></code> (). In addition, it is clear from graphs in  that they
+vary with season and hemisphere.</p>
+<p>summarizes the values used as single/̄sensor uncertainties for the winter
+seasons in each hemisphere (see for season definitions). For the SSM/I
+and SSMIS sensors, the combined standard deviations are calculated from
+a weighted average of the standard deviations for each mission according
+to the number of buoy matchups (noted SSM/IS). The same is done for
+[amsre]{acronym-label=”amsre” acronym-form=”singular+short”} and
+[amsr2]{acronym-label=”amsr2” acronym-form=”singular+short”} (noted
+AMSRs). The overall uncertainties are calculated from a simple mean of
+the x- and y-components of RMSE to the buoy drift.</p>
+<p>In , the columns are for different values of <code class="docutils literal notranslate"><span class="pre">status_flag</span></code> that are
+defined in  and duplicated here for convenience:</p>
+<ul class="simple">
+<li><p>30 (Nominal) : The vector was retrieved by first pass of CMCC,
+independently of others.</p></li>
+<li><p>20 (Small Pattern) : The CMCC was applied with a smaller radius for
+the sub-images, due to the proximity to coast, edge or missing
+value.</p></li>
+<li><p>21 (Corrected by neighbours): The vector was not retrieved in the
+first CMCC step but at the second pass, constrained using the
+neighbouring vectors.</p></li>
+</ul>
+<div class="highlight-center notranslate"><div class="highlight"><pre><span></span>
+::: {#tab:stats:valid}
+  Hemisphere   Product    Nominal (30)   Small patt. (20)   Corr. neighb. (21)
+  ------------ --------- -------------- ------------------ --------------------
+  NH           AMSRs          1.7              3.3                 8.1
+               SSMI/S         2.3              3.7                 8.0
+  SH           AMSRs          2.8              5.3                 8.3
+               SSMI/S         3.6              6.2                 8.7
+
+  : Values of $\sigma_k$ (unit km) used for single/̄sensor product
+  uncertainty in winter, depending on the type of satellite mission,
+  value of `status_flag` and hemisphere. The uncertainties are an
+  average of the and components after a 24 hours displacement (see ),
+  and are used for both  and .
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+During the spring and autumn transition months (), the uncertainties
+from are linearly weighted with the day-in-month so that there is a
+smooth transition between the nominal values in winter and a high
+uncertainty value (10 km) in summer.
+
+In summer, the wind drift model (see Chapter
+[\[chap:winds\]](#chap:winds){reference-type=&quot;ref&quot;
+reference=&quot;chap:winds&quot;}) is used instead of the satellite-derived drift.
+Thus, no summer satellite-based drift vectors are distributed to the
+users, and they are not given uncertainties.
+
+## Adapting uncertainties for time mis-registration
+
+The uncertainty values provided in the previous section are valid when
+using the single/̄sensor ice drift vectors with the space-varying start
+ and stop  time information provided in the product files. These can
+vary between and across the product grid, depending on the orbit and
+instrument characteristics (see example in  for an illustration).
+
+When  and  are not accounted for, and the vectors are used as if from
+$\mathbf{D_0}$ at to $\mathbf{D_1}$ at , the uncertainties must be
+raised. We adopt a 2nd order polynomial formula for this raised
+uncertainty $\sigma_k^{12} (\delta_t)$ (). $$\begin{aligned}
+\label{eq:uncert:deltaT}
+\delta_t &amp; = &amp; \lvert t - t_0 \rvert \\
+\sigma_k^{12} (\delta_t) &amp; = &amp; 0.015 \times \delta_{t}^2 - 0.005 \times \delta_{t} + \sigma_k \nonumber\end{aligned}$$
+where $\delta_t$ has units hours, and $\sigma_k$ is that from the
+previous section.
+
+It is easily seen from that the uncertainties for vectors with  close to
+will not be raised significantly from $\sigma_k$.
+
+The numerical coefficients in were re-used from those of the NRT product
+OSI/̄405. In brief, the polynomial shape was obtained by collocating
+buoys and the OSI/̄405 satellite products with wrong time information,
+deliberately misregistered from -10 hours to +10 hours. The mismatch was
+fitted to determine the polynominal coefficients for .
+</pre></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./OSISAF_CDR_ATBD_MD"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Thomas Lavergne and Emily Down<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

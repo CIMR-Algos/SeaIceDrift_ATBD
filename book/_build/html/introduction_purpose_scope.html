@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction, purpose and scope &#8212; ATBD Template</title>
+    <title>Introduction, purpose and scope &#8212; CIMR L2 Sea Ice Drift ATBD</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Background and justification of selected algorithm" href="background_justification_algorithm.html" />
@@ -85,7 +83,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">ATBD Template</h1>
+      <h1 class="site-logo" id="site-title">CIMR L2 Sea Ice Drift ATBD</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -96,7 +94,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   ATBD Template
+   CIMR L2 Sea Ice Drift ATBD
   </a>
  </li>
 </ul>
@@ -250,24 +248,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#here-is-an-example-of-a-table-with-a-label">
-   Here is an example of a table with a label
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Seasons
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -280,24 +260,6 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#here-is-an-example-of-a-table-with-a-label">
-   Here is an example of a table with a label
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Seasons
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -306,100 +268,31 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="introduction-purpose-and-scope">
 <h1>Introduction, purpose and scope<a class="headerlink" href="#introduction-purpose-and-scope" title="Permalink to this headline">¶</a></h1>
-<p>Here comes an introduction and the purpose and scope of the ATBD</p>
+<p>The balance between air drag, ocean drag and lateral forces controls the motion of sea ice <span id="id1">[<a class="reference internal" href="references.html#id20" title="M. Leppäranta. The drift of sea ice. Springer-Praxis Books in Geophysical Sciences. Springer-Verlag, 2nd edition, 2011.">Leppäranta, 2011</a>]</span>.
+At the local scale, sea-ice motion can both be a facilitator and impediment to ship navigation, opening and closing routes, opening leads, or forming pressure ridges.
+At the larger regional to basin scales, sea-ice motion (a.k.a. sea-ice drift) exports sea ice to lower latitudes where it melts, contributing to the redistribution of fresh water <span id="id2">[<a class="reference internal" href="references.html#id7" title="T. W. Haine. Arctic freshwater export: status, mechanisms, and prospects. Global Planet. Change, 125:13–35, 2015.">Haine, 2015</a>]</span>.
+Inside the Arctic Ocean, re-circulation of sea-ice (e.g. in the Beaufort Sea) leads to the ageing and thickening of the ice pack towards the northern coasts of the Canadian Arctic Archipelago and Greenland <span id="id3">[<a class="reference internal" href="references.html#id30" title="Mary-Louise Timmermans and John Marshall. Understanding arctic ocean circulation: a review of ocean dynamics in a changing climate. Journal of Geophysical Research: Oceans, 125(4):e2018JC014378, 2020. e2018JC014378 10.1029/2018JC014378. URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018JC014378, arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2018JC014378, doi:https://doi.org/10.1029/2018JC014378.">Timmermans and Marshall, 2020</a>]</span>.
+Sea-ice drift also plays a role in sea-ice formation and ocean circulation via the formation of coastal latent heat polynyas <span id="id4">[<a class="reference internal" href="references.html#id27" title="K.I. Ohshima, S. Nihashi, and K. Iwamoto. Global view of sea-ice production in polynyas and its linkage to dense/bottom water formation. Geosci. Lett. 3, 13, 2016. doi:https://doi.org/10.1186/s40562-016-0045-4.">Ohshima <em>et al.</em>, 2016</a>]</span>, as well as in the transport of sediments and other tracers across ocean basins
+<span id="id5">[<a class="reference internal" href="references.html#id11" title="T. Krumpen, H.J. Belter, and A. et al. Boetius. Arctic warming interrupts the transpolar drift and affects long-range transport of sea ice and ice-rafted matter. Sci Rep, 2019. doi:https://doi.org/10.1038/s41598-019-41456-y.">Krumpen <em>et al.</em>, 2019</a>]</span>. With climate change, the area and thickness of sea ice is reduced in the Arctic, which leads to a more mobile sea-ice cover and positive trends in sea-ice velocity <span id="id6">[<a class="reference internal" href="references.html#id29" title="Gunnar Spreen, Ron Kwok, and Dimitris Menemenlis. Trends in arctic sea ice drift and role of wind forcing: 1992–2009. Geophysical Research Letters, 38(19):, 2011. URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011GL048970, arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2011GL048970, doi:https://doi.org/10.1029/2011GL048970.">Spreen <em>et al.</em>, 2011</a>, <a class="reference internal" href="references.html#id15" title="R. Kwok, G. Spreen, and S. Pang. Arctic sea ice circulation and drift speed: decadal trends and ocean currents. Journal of Geophysical Research: Oceans, 118(5):2408-2425, 2013. URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/jgrc.20191, arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1002/jgrc.20191, doi:https://doi.org/10.1002/jgrc.20191.">Kwok <em>et al.</em>, 2013</a>]</span>.
+Trends in sea-ice motion, linked to trends in wind speed, are also observed in the Southern Hemisphere (SH) <span id="id7">[<a class="reference internal" href="references.html#id9" title="P. Holland and R Kwok. Wind-driven trends in antarctic sea-ice drift. Nature Geosciencies, 2012. doi:https://doi.org/10.1038/ngeo1627.">Holland and Kwok, 2012</a>, <a class="reference internal" href="references.html#id16" title="Ron Kwok, Shirley S. Pang, and Sahra Kacimi. Sea ice drift in the Southern Ocean: Regional patterns, variability, and trends. Elementa: Science of the Anthropocene, 06 2017. 32. doi:10.1525/elementa.226.">Kwok <em>et al.</em>, 2017</a>]</span>.</p>
+<p>Satellite remote sensing has developed as an attractive option to monitor sea-ice drift consistently across the polar sea-ice cover at a daily to sub-daily frequency.
+The initial work by <span id="id8">Ninnis <em>et al.</em> [<a class="reference internal" href="references.html#id24" title="R. M. Ninnis, W. J. Emery, and M. J. Collins. Automated extraction of pack ice motion from advanced very high-resolution radiometry. Journal of Geophysical Research, 91:10725–10734, 1986. doi:10.1029/JC091iC09p10725.">1986</a>]</span> was followed by many investigators using a variety of satellite imaging sensor technologies as input, including visible and infrared radiometry <span id="id9">[<a class="reference internal" href="references.html#id5" title="W. J. Emery, C. W. Fowler, J. Hawkins, and R. H. Preller. Fram Strait satellite image-derived ice motions. Journal of Geophysical Research, 96(C3):4751–4768, March 1991.">Emery <em>et al.</em>, 1991</a>]</span>,
+microwave radiometry and scatterometry <span id="id10">[<a class="reference internal" href="references.html#id2" title="T. A. Agnew, Hao Le, and T. Hirose. Estimation of large scale sea ice motion from SSMI 85.5 GHz imagery. Annals of Glaciology, 24:305–311, 1997.">Agnew <em>et al.</em>, 1997</a>, <a class="reference internal" href="references.html#id13" title="R. Kwok, A. Schweiger, D. A. Rothrock, S. Pang, and C. Kottmeier. Sea ice motion from satellite passive microwave imagery assessed with ERS SAR and buoy motions. Journal of Geophysical Research, 103:8191–8214, April 1998. doi:10.1029/97JC03334.">Kwok <em>et al.</em>, 1998</a>, <a class="reference internal" href="references.html#id21" title="Anthony K. Liu, Yunhe Zhao, and Sunny Y. Wu. Arctic sea ice drift from wavelet analysis of NSCAT and Special Sensor Microwave Imager data. Journal of Geophysical Research, 104(C5):11529–11538, 1999.">Liu <em>et al.</em>, 1999</a>, <a class="reference internal" href="references.html#id18" title="Thomas Lavergne, Steinar Eastwood, Zakaria Teffah, Harald Schyberg, and Lars-Anders Breivik. Sea ice motion from low resolution satellite sensors: an alternative method and its validation in the Arctic. Journal of Geophysical Research, 2010. doi:10.1029/2009JC005958.">Lavergne <em>et al.</em>, 2010</a>, <a class="reference internal" href="references.html#id6" title="Fanny Girard-Ardhuin and Robert Ezraty. Enhanced arctic sea ice drift estimation merging radiometer and scatterometer data. IEEE Transactions on Geoscience and Remote Sensing, 50(7):2639-2648, 2012. doi:10.1109/TGRS.2012.2184124.">Girard-Ardhuin and Ezraty, 2012</a>]</span>,
+and synthetic aperture radar (SAR) <span id="id11">[<a class="reference internal" href="references.html#id12" title="R. Kwok, J. C. Curlander, R. McConnel, and S. Pang. An ice-motion tracking system at the Alaska SAR Facility. IEEE Journal of Oceanic Engineering, 15:44–54, 1990.">Kwok <em>et al.</em>, 1990</a>, <a class="reference internal" href="references.html#id10" title="Alexander S. Komarov and David G. Barber. Sea ice motion tracking from sequential dual-polarization radarsat-2 images. IEEE Transactions on Geoscience and Remote Sensing, 52(1):121-136, 2014. doi:10.1109/TGRS.2012.2236845.">Komarov and Barber, 2014</a>, <a class="reference internal" href="references.html#id22" title="S. Muckenhuber, A. A. Korosov, and S. Sandven. Open-source feature-tracking algorithm for sea ice \hack \newline  drift retrieval from sentinel-1 sar imagery. The Cryosphere, 10(2):913–925, 2016. URL: https://tc.copernicus.org/articles/10/913/2016/, doi:10.5194/tc-10-913-2016.">Muckenhuber <em>et al.</em>, 2016</a>]</span>. The various imaging technologies however lead to sea-ice motion fields with different characteristics, e.g.
+medium spatial resolution (∼ 20 km) and coverage limited by cloud cover for the visible and infrared radiometry, high spatial resolution (∼ 5–10 km) but coverage limited by acquisition repeat cycles for the SAR imagery,
+and coarse spatial resolution (&gt; 30 km) and daily complete coverage for the microwave radiometers and scatterometers. Despite the imaging technologies being very different from each other, the motion tracking algorithms
+employed are quite similar and stem from the maximum cross-correlation (MCC) technique <span id="id12">[<a class="reference internal" href="references.html#id3" title="W. J. Emery, A. C. Thomas, M. J. Collins, W. R. Crawford, and D. L. Mackas. An objective method for computing advective surface velocities from sequential infrared satellite images. Journal of Geophysical Research, 91:12865–12878, 1986.">Emery <em>et al.</em>, 1986</a>]</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is an example of a note</p>
+<p>The characteristics of the CIMR mission, and especially the spatial resolution obtained at Ku (5 km)
+and Ka (4 km) should allow global, year-round (irrespective of solar illumination and cloud cover), sub-daily moniroting at medium spatial resolution (25 km), which is unprecedented.</p>
 </div>
-<div class="section" id="here-is-an-example-of-a-table-with-a-label">
-<h2>Here is an example of a table with a label<a class="headerlink" href="#here-is-an-example-of-a-table-with-a-label" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table" id="gridscdr">
-<thead>
-<tr class="row-odd"><th class="head"><p>Id</p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{n}_{x}\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{n}_{y}\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{A}_{x}\)</span> [km]</p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{A}_{y}\)</span> [km]</p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{B}_{x}\)</span> [km]</p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{B}_{y}\)</span> [km]</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nh_ease2-750</span></code>, <code class="docutils literal notranslate"><span class="pre">sh_ease2-750</span></code></p></td>
-<td><p>144</p></td>
-<td><p>144</p></td>
-<td><p>75.0</p></td>
-<td><p>75.0</p></td>
-<td><p>-5375.0</p></td>
-<td><p>5375.0</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nh_ease2-250</span></code>, <code class="docutils literal notranslate"><span class="pre">sh_ease2-250</span></code></p></td>
-<td><p>432</p></td>
-<td><p>432</p></td>
-<td><p>25.0</p></td>
-<td><p>25.0</p></td>
-<td><p>-5387.5</p></td>
-<td><p>5387.5</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nh_ease2-125</span></code>, <code class="docutils literal notranslate"><span class="pre">sh_ease2-125</span></code></p></td>
-<td><p>864</p></td>
-<td><p>864</p></td>
-<td><p>12.5</p></td>
-<td><p>12.5</p></td>
-<td><p>-5393.75</p></td>
-<td><p>5393.75</p></td>
-</tr>
-</tbody>
-</table>
-<p>Here is a citation, <span id="id1">[<a class="reference internal" href="references.html#id8" title="M. J. Brodzik, B. Billingsley, T. Haran, B. Raup, and M. H. Savoie. EASE-Grid 2.0: Incremental but Significant Improvements for Earth-Gridded Data Sets. ISPRS International Journal of Geo-Information, 1(1):32 – 45, 2012. \doi 10.3390/ijgi1010032.">Brodzik <em>et al.</em>, 2012</a>]</span></p>
-<p>Here is an example of how to label a section:</p>
-</div>
-<div class="section" id="id2">
-<h2>Seasons<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>The  sea-ice drift CDR has global coverage and thus cover all sea ice in
-the Northern Hemisphere (NH) and Southern Hemisphere (SH). The quality
-of the drift estimates vary with season, and it is convenient to refer
-to winter, summer, and transition periods. The definition of these
-periods are in .</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p>Northern Hemisphere</p></th>
-<th class="head"><p>Southern Hemisphere</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Winter</p></td>
-<td><p>Nov - Apr</p></td>
-<td><p>Apr - Sept</p></td>
-</tr>
-<tr class="row-odd"><td><p>Spring</p></td>
-<td><p>May</p></td>
-<td><p>Oct</p></td>
-</tr>
-<tr class="row-even"><td><p>Summer</p></td>
-<td><p>Jun - Sept</p></td>
-<td><p>Nov - Feb</p></td>
-</tr>
-<tr class="row-odd"><td><p>Autumn</p></td>
-<td><p>Oct</p></td>
-<td><p>Mar</p></td>
-</tr>
-</tbody>
-</table>
-<p>Here is an example of how to insert and label images:</p>
-<div class="figure align-default" id="inv-params-nh">
-<img alt="_images/inv_params_nh_2013-2020_jul.jpg" src="_images/inv_params_nh_2013-2020_jul.jpg" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Figure caption here!</span><a class="headerlink" href="#inv-params-nh" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="inv-params-sh">
-<img alt="_images/inv_params_sh_2012-2019_dec.jpg" src="_images/inv_params_sh_2012-2019_dec.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Second figure caption</span><a class="headerlink" href="#inv-params-sh" title="Permalink to this image">¶</a></p>
-</div>
-<p>These maps of parameters and residuals are saved in a monthly parameter
-file. In Figures <a class="reference internal" href="#inv-params-nh"><span class="std std-numref">Fig. 1</span></a> and <a class="reference internal" href="#inv-params-sh"><span class="std std-numref">Fig. 2</span></a>
-examples of these parameters are shown.</p>
-</div>
+<p>The Level-2 sea-ice drift product described in this ATBD has been specifically designed to fully exploit the CIMR mission, in particular:</p>
+<ol class="simple">
+<li><p>the CIMR sea-ice drift product is a Level-2 product, adopting a swath-to-swath approach <span id="id13">[<a class="reference internal" href="references.html#id19" title="T. Lavergne, M. Piñol Solé, E. Down, and C. Donlon. Towards a swath-to-swath sea-ice drift product for the copernicus imaging microwave radiometer mission. The Cryosphere, 15(8):3681–3698, 2021. URL: https://tc.copernicus.org/articles/15/3681/2021/, doi:10.5194/tc-15-3681-2021.">Lavergne <em>et al.</em>, 2021</a>]</span>. This is conversely to all existing sea-ice drift products from passive microwave missions (OSI SAF, IFREMER, NSIDC, etc…) that are Level-3 products (available once a day from daily averaged maps of brightness temperatures). SAR-based products (e.g. from the CMEMS Sea Ice Thematic Assembly Center) are generally swath-to-swath products (but with spatial coverage limited by the coverage of the SAR missions).</p></li>
+<li><p>the CIMR sea-ice drift product aims at a 25 km grid spacing, taking full advantage of the Ku and Ka imagery.</p></li>
+<li><p>sea-ice drift is derived both from the forward and backward scans separately to improve quality control (filtering of “rogue” vectors)</p></li>
+</ol>
 </div>
 
     <script type="text/x-thebe-config">
@@ -448,7 +341,7 @@ examples of these parameters are shown.</p>
     <footer class="footer">
   <p>
     
-      By CIMR Devalgo<br/>
+      By Thomas Lavergne and Emily Down<br/>
     
         &copy; Copyright 2021.<br/>
   </p>

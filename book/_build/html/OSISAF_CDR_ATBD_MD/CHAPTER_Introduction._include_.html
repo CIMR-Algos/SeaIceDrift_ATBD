@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction {#chap:intro} &#8212; CIMR L2 Sea Ice Drift ATBD</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CIMR L2 Sea Ice Drift ATBD</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   CIMR L2 Sea Ice Drift ATBD
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../abstract.html">
+   Abstract
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../applicable_ref_docs.html">
+   Applicable and Reference Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../acronyms.html">
+   Acronyms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../definitions.html">
+   Definitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction_purpose_scope.html">
+   Introduction, purpose and scope
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../background_justification_algorithm.html">
+   Background and justification of selected algorithm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../L2_product_definition.html">
+   Level-2 product definition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../baseline_algorithm_definition.html">
+   Baseline Algorithm Definition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algorithm_input_output_data_definition.html">
+   Algorithm Input and Output Data Definition (IODD)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../algorithm_performance_assessment.html">
+   Algorithm Performance Assessment (Version 2 ATBD)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../markdown-notebooks.html">
+   Notebook comments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notebooks.html">
+   Python notebook placeholder
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   References (example)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../annex.html">
+   Annex
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/OSISAF_CDR_ATBD_MD/CHAPTER_Introduction._include_.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CIMR-Algos/ATBD-Template"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope-of-this-document">
+   Scope of this document
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-and-applicable-documents">
+   Reference and applicable documents
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference-documents">
+     Reference documents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applicable-documents">
+     Applicable documents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#date-and-time-sec-notations-datetime">
+     Date and Time {#sec:notations:datetime}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grids-and-spatial-projection-sec-notations-projs">
+     Grids and spatial projection {#sec:notations:projs}
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction {#chap:intro}</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope-of-this-document">
+   Scope of this document
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-and-applicable-documents">
+   Reference and applicable documents
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference-documents">
+     Reference documents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applicable-documents">
+     Applicable documents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#date-and-time-sec-notations-datetime">
+     Date and Time {#sec:notations:datetime}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grids-and-spatial-projection-sec-notations-projs">
+     Grids and spatial projection {#sec:notations:projs}
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-chap-intro">
+<h1>Introduction {#chap:intro}<a class="headerlink" href="#introduction-chap-intro" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="scope-of-this-document">
+<h2>Scope of this document<a class="headerlink" href="#scope-of-this-document" title="Permalink to this headline">¶</a></h2>
+<p>This Algorithm Theoretical Basis Document describes the algorithm
+baseline for the  global Climate Data Record of Sea Ice Drift (OSI/̄455).</p>
+<p>As described in , OSI/̄455 has a strong heritage from the near-real-time
+(NRT) product OSI/̄405, which is why several of the algorithm steps are
+common to the two product families.</p>
+<p>Note that the  also produces a near-real-time sea-ice drift product
+(OSI/̄407) from the visible and thermal-infrared imagery of the AVHRR
+instruments.</p>
+</div>
+<div class="section" id="reference-and-applicable-documents">
+<h2>Reference and applicable documents<a class="headerlink" href="#reference-and-applicable-documents" title="Permalink to this headline">¶</a></h2>
+<p>User related aspects of the product (like file format and output
+specifications) are to be found in the Product User’s Manual
+([pum]{acronym-label=”pum” acronym-form=”singular+short”})
+<a class="reference external" href="#doc:pum">[]</a>. Results from validation against on-ice drifters are
+gathered in an associated Scientific Validation Report
+([svr]{acronym-label=”svr” acronym-form=”singular+short”})
+<a class="reference external" href="#doc:val">[]</a>.</p>
+<div class="section" id="reference-documents">
+<h3>Reference documents<a class="headerlink" href="#reference-documents" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="applicable-documents">
+<h3>Applicable documents<a class="headerlink" href="#applicable-documents" title="Permalink to this headline">¶</a></h3>
+<p>[]{#sec:notations label=”sec:notations”}</p>
+</div>
+<div class="section" id="date-and-time-sec-notations-datetime">
+<h3>Date and Time {#sec:notations:datetime}<a class="headerlink" href="#date-and-time-sec-notations-datetime" title="Permalink to this headline">¶</a></h3>
+<p>As any image-based motion tracking algorithms, the low resolution sea
+ice drift processing quantifies the amount of motion between two time
+stamps by analysing the change in intensity patterns between two images.
+Those are referred to as <span class="math notranslate nohighlight">\(\mathcal{I}_0\)</span> (start image) and
+<span class="math notranslate nohighlight">\(\mathcal{I}_1\)</span> (stop image). Unless specified otherwise, subscript <span class="math notranslate nohighlight">\(0\)</span>
+(<span class="math notranslate nohighlight">\(1\)</span>) always refers to the <em>start</em> (<em>stop</em>) time stamp of the
+displacement.</p>
+<p>The  low resolution sea ice drift product is computed between daily maps
+of satellite signals, as opposed to between individual satellite swaths
+[&#64;lavergne:2021:s2s]. <span class="math notranslate nohighlight">\(\mathbf{D}_0\)</span> (<span class="math notranslate nohighlight">\(\mathbf{D}_1\)</span>) is the date for
+the start (stop) of the displacement. <span class="math notranslate nohighlight">\(\mathbf{D}&#64;\textrm{hh}\)</span> can be
+used to express a time stamp in a specific day. All hours are <em>UTC</em>.</p>
+</div>
+<div class="section" id="grids-and-spatial-projection-sec-notations-projs">
+<h3>Grids and spatial projection {#sec:notations:projs}<a class="headerlink" href="#grids-and-spatial-projection-sec-notations-projs" title="Permalink to this headline">¶</a></h3>
+<p>To ensure consistency with other sea-ice CDRs from , ESA Climate Change
+Initiative, and the Copernicus Climate Change, OSI/̄455 is prepared on an
+Equal-Area Scalable Earth (EASE2) grid [&#64;brodzik/etal:2012], with a
+WGS84 geographic datum.</p>
+<p>OSI/̄455 product files use two EASE2 polar grids (Northern and Southern
+Hemisphere) with a 75 km grid spacing (first row in ). Two other grid
+spacings (12.5 km and 25 km) are also used during the processing.</p>
+<div class="highlight-center notranslate"><div class="highlight"><pre><span></span>
+::: {#tab:gridsCDR}
+  Id                                 n     n    $\mathbf{A}\subs{x}$ \[km\]   $\mathbf{A}\subs{y}$ \[km\]   $\mathbf{B}\subs{x}$ \[km\]   $\mathbf{B}\subs{y}$ \[km\]
+  -------------------------------- ----- ----- ----------------------------- ----------------------------- ----------------------------- -----------------------------
+  `nh_ease2-750`, `sh_ease2-750`    144   144              75.0                          75.0                         -5362.5                       -5362.5
+  `nh_ease2-250`, `sh_ease2-250`    432   432              25.0                          25.0                         -5387.5                       5387.5
+  `nh_ease2-125`, `sh_ease2-125`    864   864              12.5                          12.5                        -5393.75                       5393.75
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+[]{#tab:gridsCDR label=&quot;tab:gridsCDR&quot;}
+
+describes the mapping formulas from a geographical point
+$(\lambda,\phi)$ into a $(x,y)$ point in the projection plane and,
+eventually, into $[i,j]$ indexes in the two-dimensional array of the
+grid. Those formulas are used in the rest of the document each time a
+remapping is needed.
+
+Cell coordinates always point to the center of a grid cell. Thus, point
+$[i,j]$ is at the centre of a square grid cell (pixel) whose corner
+points are $(i-\frac{1}{2},j-\frac{1}{2})$,
+$(i-\frac{1}{2},j+\frac{1}{2})$, \...
+
+### Seasons {#sec:notations:season}
+
+The  sea-ice drift CDR has global coverage and thus covers all sea ice
+in the Northern Hemisphere (NH) and Southern Hemisphere (SH). The
+quality of the drift estimates vary with season, and it is convenient to
+refer to winter, summer, and transition (spring and autumn) months. The
+definition of these periods are in .
+
+::: center
+::: {#tab:seasons}
+            Northern Hemisphere   Southern Hemisphere
+  -------- --------------------- ---------------------
+  Winter         Nov - Apr            Apr - Sept
+  Spring            May                   Oct
+  Summer        Jun - Sept             Nov - Feb
+  Autumn            Oct                   Mar
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+[]{#tab:seasons label=&quot;tab:seasons&quot;}
+
+### Units {#sec:notations:units}
+
+Unless otherwise stated, all vector components  and  stand for the sea
+ice displacement *over a 24 hours period*, *along the two axis of the
+EASE2 grid*. They have unit $km$.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./OSISAF_CDR_ATBD_MD"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Thomas Lavergne and Emily Down<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
