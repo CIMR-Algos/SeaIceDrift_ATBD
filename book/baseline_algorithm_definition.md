@@ -17,14 +17,6 @@ is first resampled to a common grid. This makes the level-2 sea-ice drift produc
 3. the algorithm operates not with one, but with at least **two** Level-1b files as input;
 4. for each incoming Level-1b file, one can generate more than one Level-2 sea-ice drift product (consider the swath intersection with the most recent Level-1b swath, the one before, etc...)
 
-## Retrieval Method
-
-? 
-
-## Forward Model
-
-N/A
-
 ## CIMR Level-1b re-sampling approach
 
 The re-sampling approach for resampling CIMR Level-1b Ku and Ka band imagery is not defined at this stage. From experience with sea-ice motion tracking from other passive
@@ -37,7 +29,7 @@ re-sampling:
 4. Aim at a grid spacing close to 5 km (TBC).
 
 {numref}`grids` defines four grids, two for the northern hemisphere, two for the southern hemisphere. nx (ny) is the number of grid cells in x (y) dimension, Ax (Ay) is the grid spacing, and Cx (Cy) is the coordinate
-of the upper-left corner of the upper-left cell in the grid. Grids `n|h_ease2-005` have 5 km grid spacing and are candidate target grids on which to remap the Level-1b imagery. Grids `n|h_ease2-250` have 25 km grid spacing
+of the upper-left corner of the upper-left cell in the grid. Grids `(n,s)h_ease2-005` have 5 km grid spacing and are candidate target grids on which to remap the Level-1b imagery. Grids `(n,s)h_ease2-250` have 25 km grid spacing
 and are candidate grids for the resulting Level-2 sea-ice drift product. By construction, the center of the cells of the two '250' grids fall exactly at the center of one every five grid cells of the '005' grids. This
 ensures that drift vectors (at every grid cell of the '250' grids) use image blocks (from the '005' grids) that are perfectly aligned.
 
@@ -89,10 +81,6 @@ End-to-end algorithm flow diagram of the CIMR Level-2 sea-ice drift algorithm
 The Level-2 sea-ice drift algorithm shall only be applied over sea-ice portions of the image. We thus need to prepare an ice/ocean mask as well
 as a land-mask to only process over sea ice. 
 
-##### Mathematical description
-
-N/A
-
 ##### Input data
 
 The latitude and longitude of the image grids `nh_ease2-005` and `sh_ease2-005`.
@@ -104,14 +92,6 @@ A 2D field of ice/no-ice/land on the image grids.
 ##### Auxiliary data
 
 A source of sea-ice concentration (can be from CIMR Level-2 Sea Ice Concentration product, or Level-2 Integrated-Retrieval product).
-
-##### Ancillary data
-
-N/A
-
-##### Validation process
-
-N/A
 
 #### Remap Level-1b brightness temperatures to the EASE2 image grids
 
@@ -137,17 +117,9 @@ The Level-1b brightness temperatures of all samples in the  input Level-1b file,
 
 16 2D field of brightness temperature on the image grids (2 grids x 2 scans x 4 channels).
 
-##### Auxiliary data
-
-N/A
-
 ##### Ancillary data
 
 The latitude and longitude of all the Level-1b samples.
-
-##### Validation process
-
-N/A
 
 #### Image preprocessing (Laplacian filter)
 
@@ -202,17 +174,9 @@ The remapped brightness temperatures on the image grids (16 2D fields).
 
 16 2D field of laplacian-filtered brightness temperature on the image grids.
 
-##### Auxiliary data
-
-N/A
-
 ##### Ancillary data
 
 The ice/water/land mask on the image grids.
-
-##### Validation process
-
-N/A
 
 ### Sea-ice motion tracking
 
@@ -238,7 +202,7 @@ In any case, the description below is for a single (start, end) image pair, and 
 
 #### Select grid locations where to apply the CMCC algorithm
 
-The CMCC can only be applied where the two swaths (start and end images) overlap over sea ice. A first step in the processing is thus to go through all the positions in the `(n|s)h_ease2-250` grid and test if
+The CMCC can only be applied where the two swaths (start and end images) overlap over sea ice. A first step in the processing is thus to go through all the positions in the `(n,s)h_ease2-250` grid and test if
 there is sufficient overlap between the two images, and if the overlap is over sea ice.
 
 ##### Logical description
@@ -263,29 +227,17 @@ The positions that are not discarded after those three steps are passed to the n
 
 ##### Input data
 
-The two (start and end) ice/ocean/land masks on the image grid `(n|s)h_ease2-005`.
+The two (start and end) ice/ocean/land masks on the image grid `(n,s)h_ease2-005`.
 
-The two (start and end) laplacian-filtered brightness temperature maps on the image grid `(n|s)h_ease2-005`.
+The two (start and end) laplacian-filtered brightness temperature maps on the image grid `(n,s)h_ease2-005`.
 
 The diameter of the sub-image (*aka* image block) to be used in the CMCC, in number of pixels.
 
-The definition of the Level-2 product grid `(n|s)h_ease2-025`.
+The definition of the Level-2 product grid `(n,s)h_ease2-025`.
 
 ##### Output data
 
 A 2D field of status flags recording the status at the end of this selection step (in particular recording where and why CMCC will not be attempted).
-
-##### Auxiliary data
-
-N/A
-
-##### Ancillary data
-
-N/A
-
-##### Validation process
-
-N/A
 
 #### Run the CMCC algorithm
 
@@ -472,23 +424,11 @@ The 8 imagery bands for the start and end images, as well as the associated vali
 
 ##### Output data
 
-A 2D field of drift vectors ($\delta_x$ and $\delta_y$ components) on the `(n|h)_ease2-250` grid.
+A 2D field of drift vectors ($\delta_x$ and $\delta_y$ components) on the `(n,s)h_ease2-250` grid.
 
 A 2D field of maximum cross-correlation value for each vector.
 
 A 2D field of status flags recording the status at the end of the CMCC optimization.
-
-##### Auxiliary data
-
-N/A
-
-##### Ancillary data
-
-N/A
-
-##### Validation process
-
-N/A
 
 #### Quality Control: detect and correct outliers ("rogue" vectors)
 
@@ -566,7 +506,7 @@ This detection / correction process continues until all vectors are either corre
 
 ##### Input data
 
-The 2D field of drift vectors ($\delta_x$ and $\delta_y$ components) on the `(n|h)_ease2-250` grid from the initial CMCC run.
+The 2D field of drift vectors ($\delta_x$ and $\delta_y$ components) on the `(n,s)h_ease2-250` grid from the initial CMCC run.
 
 The 2D field of maximum cross-correlation value for each vector from the initial CMCC run.
 
@@ -576,22 +516,10 @@ The 2D field of status flags recording the status at the end of the initial CMCC
 
 Updates:
 
-The 2D field of drift vectors ($\delta_x$ and $\delta_y$ components) on the `(n|h)_ease2-250` grid from the initial CMCC run.
+The 2D field of drift vectors ($\delta_x$ and $\delta_y$ components) on the `(n,s)h_ease2-250` grid from the initial CMCC run.
 
 The 2D field of maximum cross-correlation value for each vector from the initial CMCC run.
 
 The 2D field of status flags recording the status at the end of the initial CMCC optimization.
-
-##### Auxiliary data
-
-N/A
-
-##### Ancillary data
-
-N/A
-
-##### Validation process
-
-N/A
 
 
