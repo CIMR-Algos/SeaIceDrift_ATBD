@@ -406,7 +406,7 @@ mono-dimensional correlation signal $\rho$. Here, the $\mathbf{L}$ parameter is 
 
 In Eq. {eq}`eq_penalising`, $\rho_D$ is the penalised correlation function. Finding the maximum
 of $\rho_D$ is taken as a proxy for solving the original, constrained,
-optimisation problem of Eq. (eq)`eq_maxim`. $\rho_D$ is the function entering the Nelder-Mead
+optimisation problem of Eq. {eq}`eq_maxim`. $\rho_D$ is the function entering the Nelder-Mead
 algorithm instead of $\rho$.
 
 It is customary to compute $\mathbf{L}$ as a maximum expected speed
