@@ -3,7 +3,7 @@
 ## The Continuous Maximum Cross-Correlation method (CMCC)
 
 As for many other motion tracking methods applied in geophysics
-{citep}`nsidc:1998:drift-summary,notarstefano:2007:sst-motion`, sea ice
+{cite:p}`nsidc:1998:drift-summary,notarstefano:2007:sst-motion`, sea ice
 drift is tracked from a pair of images, with a block-based strategy.
 Each block (*feature*, *sub-image*, \...) is composed of a limited
 ensemble of pixels from the first image (the *reference* block) and
