@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Baseline Algorithm Definition &#8212; CIMR L2 Sea Ice Drift ATBD v1</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,22 +20,18 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/watermark.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -41,12 +39,13 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -66,7 +65,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +88,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -95,14 +109,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   CIMR L2 Sea Ice Drift ATBD
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    CIMR L2 Sea Ice Drift ATBD
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="abstract.html">
    Abstract
@@ -156,87 +171,148 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/baseline_algorithm_definition.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/CIMR-Algos/SeaIceDrift_ATBD"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/CIMR-Algos/SeaIceDrift_ATBD"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/baseline_algorithm_definition.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cimr-level-1b-re-sampling-approach">
    CIMR Level-1b re-sampling approach
@@ -417,12 +493,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Baseline Algorithm Definition</h1>
@@ -619,11 +694,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="baseline-algorithm-definition">
-<h1>Baseline Algorithm Definition<a class="headerlink" href="#baseline-algorithm-definition" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="baseline-algorithm-definition">
+<h1>Baseline Algorithm Definition<a class="headerlink" href="#baseline-algorithm-definition" title="Permalink to this headline">#</a></h1>
 <p>In the following sections, the Level-2 sea-ice drift algorithm is further
 described. It consists in those steps:</p>
 <ul class="simple">
@@ -641,8 +717,8 @@ is first resampled to a common grid. This makes the level-2 sea-ice drift produc
 <li><p>the algorithm operates not with one, but with at least <strong>two</strong> Level-1b files as input;</p></li>
 <li><p>for each incoming Level-1b file, one can generate more than one Level-2 sea-ice drift product (consider the swath intersection with the most recent Level-1b swath, the one before, etc…)</p></li>
 </ol>
-<div class="section" id="cimr-level-1b-re-sampling-approach">
-<h2>CIMR Level-1b re-sampling approach<a class="headerlink" href="#cimr-level-1b-re-sampling-approach" title="Permalink to this headline">¶</a></h2>
+<section id="cimr-level-1b-re-sampling-approach">
+<h2>CIMR Level-1b re-sampling approach<a class="headerlink" href="#cimr-level-1b-re-sampling-approach" title="Permalink to this headline">#</a></h2>
 <p>The re-sampling approach for resampling CIMR Level-1b Ku and Ka band imagery is not defined at this stage. From experience with sea-ice motion tracking from other passive
 microwave mission, the Level-1b re-sampling approach does not have a large influence on the results. At this stage, the following characteristics are expected from the
 re-sampling:</p>
@@ -657,7 +733,7 @@ of the upper-left corner of the upper-left cell in the grid. Grids <code class="
 and are candidate grids for the resulting Level-2 sea-ice drift product. By construction, the center of the cells of the two ‘250’ grids fall exactly at the center of one every five grid cells of the ‘005’ grids. This
 ensures that drift vectors (at every grid cell of the ‘250’ grids) use image blocks (from the ‘005’ grids) that are perfectly aligned.</p>
 <table class="colwidths-auto table" id="grids">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Definition of EASE2 grids used in the Level-2 sea-ice drift processing (TBC)</span><a class="headerlink" href="#grids" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Definition of EASE2 grids used in the Level-2 sea-ice drift processing (TBC)</span><a class="headerlink" href="#grids" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Id</p></th>
 <th class="head"><p>nx</p></th>
@@ -692,81 +768,83 @@ ensures that drift vectors (at every grid cell of the ‘250’ grids) use image
 <p>The remaining of the algorithm description does not depend on this choice, which can easily be changed in the course of the product development.</p>
 <p>Each incoming Level-1b file thus results in 16 gridded fields of brightness temperature: 2 hemispheres x 2 scans x 4 bands. These can be written in two L1C-like netCDF files (1 per hemisphere) or
 directly entered in the motion tracking algorithm. They must be written to netCDF files at one point so that they are available for sea-ice drift processing when the next Level-1b swath file arrives.</p>
-</div>
-<div class="section" id="algorithm-assumptions-and-simplifications">
-<h2>Algorithm Assumptions and Simplifications<a class="headerlink" href="#algorithm-assumptions-and-simplifications" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="algorithm-assumptions-and-simplifications">
+<h2>Algorithm Assumptions and Simplifications<a class="headerlink" href="#algorithm-assumptions-and-simplifications" title="Permalink to this headline">#</a></h2>
 <p>All block-based motion have similar assumptions and simplifications. They assume that each pixel in a block moves at a constant rate from one image to the next: what is retrieved are the <code class="docutils literal notranslate"><span class="pre">dx</span></code> and <code class="docutils literal notranslate"><span class="pre">dy</span></code>
 components of the motion vector. In case of rotational motion within the area of the image block, the retrieved components will be those representing most faithfully the change in intensity between
 the two images, but the rotation rate is not measured. By the same token, if deformation (convergence / divergence / shear) occurs within the area of the image blocks, this will not be detected.
 Rotation and deformation betwen image blocks (between neighbouring pixels) can of course be detected.</p>
 <p>To detect and possibly correct “rogue” vectors in the motion field, we have to assume that the motion field is spatially coherent in a neighbourhood. This is because we detect anomalous motion vectors
 by their distance to the local average motion. One must be careful with this assumption as to not artificially smooth the motion fields and remove actual diverging / converging motion.</p>
-</div>
-<div class="section" id="level-2-end-to-end-algorithm-functional-flow-diagram">
-<h2>Level-2 end to end algorithm functional flow diagram<a class="headerlink" href="#level-2-end-to-end-algorithm-functional-flow-diagram" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="level-2-end-to-end-algorithm-functional-flow-diagram">
+<h2>Level-2 end to end algorithm functional flow diagram<a class="headerlink" href="#level-2-end-to-end-algorithm-functional-flow-diagram" title="Permalink to this headline">#</a></h2>
 <p><a class="reference internal" href="#fig-flow-diagram"><span class="std std-numref">Fig. 3</span></a> shows the flow diagram for the CIMR Level-2 sea-ice drift algorithm. Note the structure in two chains: preprocessing of the image, and sea-ice motion tracking per se.</p>
-<div class="figure align-default" id="fig-flow-diagram">
+<figure class="align-default" id="fig-flow-diagram">
 <a class="reference internal image-reference" href="_images/CIMR_L2_Sea_Ice_Drift_Flow_Diagram.png"><img alt="_images/CIMR_L2_Sea_Ice_Drift_Flow_Diagram.png" src="_images/CIMR_L2_Sea_Ice_Drift_Flow_Diagram.png" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">End-to-end algorithm flow diagram of the CIMR Level-2 sea-ice drift algorithm</span><a class="headerlink" href="#fig-flow-diagram" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="functional-description-of-each-algorithm-step">
-<h2>Functional description of each Algorithm step<a class="headerlink" href="#functional-description-of-each-algorithm-step" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="pre-processing">
-<h3>Pre-processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="prepare-ice-ocean-land-mask">
-<h4>Prepare ice/ocean/land mask<a class="headerlink" href="#prepare-ice-ocean-land-mask" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">End-to-end algorithm flow diagram of the CIMR Level-2 sea-ice drift algorithm</span><a class="headerlink" href="#fig-flow-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="functional-description-of-each-algorithm-step">
+<h2>Functional description of each Algorithm step<a class="headerlink" href="#functional-description-of-each-algorithm-step" title="Permalink to this headline">#</a></h2>
+<section id="pre-processing">
+<h3>Pre-processing<a class="headerlink" href="#pre-processing" title="Permalink to this headline">#</a></h3>
+<section id="prepare-ice-ocean-land-mask">
+<h4>Prepare ice/ocean/land mask<a class="headerlink" href="#prepare-ice-ocean-land-mask" title="Permalink to this headline">#</a></h4>
 <p>The Level-2 sea-ice drift algorithm shall only be applied over sea-ice portions of the image. We thus need to prepare an ice/ocean mask as well
 as a land-mask to only process over sea ice.</p>
-<div class="section" id="input-data">
-<h5>Input data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h5>
+<section id="input-data">
+<h5>Input data<a class="headerlink" href="#input-data" title="Permalink to this headline">#</a></h5>
 <p>The latitude and longitude of the image grids <code class="docutils literal notranslate"><span class="pre">nh_ease2-005</span></code> and <code class="docutils literal notranslate"><span class="pre">sh_ease2-005</span></code>.</p>
-</div>
-<div class="section" id="output-data">
-<h5>Output data<a class="headerlink" href="#output-data" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="output-data">
+<h5>Output data<a class="headerlink" href="#output-data" title="Permalink to this headline">#</a></h5>
 <p>A 2D field of ice/no-ice/land on the image grids.</p>
-</div>
-<div class="section" id="auxiliary-data">
-<h5>Auxiliary data<a class="headerlink" href="#auxiliary-data" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="auxiliary-data">
+<h5>Auxiliary data<a class="headerlink" href="#auxiliary-data" title="Permalink to this headline">#</a></h5>
 <p>A source of sea-ice concentration (can be from CIMR Level-2 Sea Ice Concentration product, or Level-2 Integrated-Retrieval product).</p>
-</div>
-</div>
-<div class="section" id="remap-level-1b-brightness-temperatures-to-the-ease2-image-grids">
-<h4>Remap Level-1b brightness temperatures to the EASE2 image grids<a class="headerlink" href="#remap-level-1b-brightness-temperatures-to-the-ease2-image-grids" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="remap-level-1b-brightness-temperatures-to-the-ease2-image-grids">
+<h4>Remap Level-1b brightness temperatures to the EASE2 image grids<a class="headerlink" href="#remap-level-1b-brightness-temperatures-to-the-ease2-image-grids" title="Permalink to this headline">#</a></h4>
 <p>The Level-1b data (brightness temperature at Ku-V, Ku-H, Ka-V, Ka-H) are remapped onto the EASE2 image grids <code class="docutils literal notranslate"><span class="pre">nh_ease2-005</span></code> and <code class="docutils literal notranslate"><span class="pre">sh_ease2-005</span></code>. The forward and backward scans
 are remapped independently.</p>
 <p>A <em>valid time</em> is associated to the remapped imagery. It can be defined as the mean time of all the Level-1b samples remapped onto the image grid or the time of the observation closest to the (north or south pole).
 The exact definition is not critical, neither is the accuracy, so that a single valid time is associated to all 8 remapped imagery bands in the northern hemisphere, and a single (different) time to the 8
 remapped imagery bands i nthe southern hemisphere.</p>
-<div class="section" id="mathematical-description">
-<h5>Mathematical description<a class="headerlink" href="#mathematical-description" title="Permalink to this headline">¶</a></h5>
+<section id="mathematical-description">
+<h5>Mathematical description<a class="headerlink" href="#mathematical-description" title="Permalink to this headline">#</a></h5>
 <p>Remapping is the process of computing the Level-1b brightness temperature onto a regular Earth-based grid. The values in the image grid can generally be described as a weighted sum of
 the values in the Level-1b swath projection. The mathematical description is TBD and will depend on the selected remapping strategy (TBD for v2 ATBD).</p>
-</div>
-<div class="section" id="id1">
-<h5>Input data<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id1">
+<h5>Input data<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h5>
 <p>The latitude and longitude of the image grids <code class="docutils literal notranslate"><span class="pre">nh_ease2-005</span></code> and <code class="docutils literal notranslate"><span class="pre">sh_ease2-005</span></code>.</p>
 <p>The Level-1b brightness temperatures of all samples in the  input Level-1b file, splitted in a forward and a backward scan.</p>
-</div>
-<div class="section" id="id2">
-<h5>Output data<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id2">
+<h5>Output data<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h5>
 <p>16 2D field of brightness temperature on the image grids (2 grids x 2 scans x 4 channels).</p>
-</div>
-<div class="section" id="ancillary-data">
-<h5>Ancillary data<a class="headerlink" href="#ancillary-data" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="ancillary-data">
+<h5>Ancillary data<a class="headerlink" href="#ancillary-data" title="Permalink to this headline">#</a></h5>
 <p>The latitude and longitude of all the Level-1b samples.</p>
-</div>
-</div>
-<div class="section" id="image-preprocessing-laplacian-filter">
-<h4>Image preprocessing (Laplacian filter)<a class="headerlink" href="#image-preprocessing-laplacian-filter" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="image-preprocessing-laplacian-filter">
+<h4>Image preprocessing (Laplacian filter)<a class="headerlink" href="#image-preprocessing-laplacian-filter" title="Permalink to this headline">#</a></h4>
 <p>The remapped brightness temperatures are not used direclty as input to the sea-ice motion tracking step. Instead, a filter is first applied to the remapped imagery to
 enhance and stabilize intensity patterns.</p>
 <p>At the end of the step, the laplacian processed imagery are saved to disk, e.g. in netCDF files (two separated files for the two hemispheres).</p>
-<div class="section" id="id3">
-<h5>Mathematical description<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
+<section id="id3">
+<h5>Mathematical description<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h5>
 <p>A common filter, used by <span id="id4">Girard-Ardhuin and Ezraty [<a class="reference internal" href="references.html#id7" title="Fanny Girard-Ardhuin and Robert Ezraty. Enhanced arctic sea ice drift estimation merging radiometer and scatterometer data. IEEE Transactions on Geoscience and Remote Sensing, 50(7):2639-2648, 2012. doi:10.1109/TGRS.2012.2184124.">2012</a>]</span> and <span id="id5">Lavergne <em>et al.</em> [<a class="reference internal" href="references.html#id19" title="Thomas Lavergne, Steinar Eastwood, Zakaria Teffah, Harald Schyberg, and Lars-Anders Breivik. Sea ice motion from low resolution satellite sensors: an alternative method and its validation in the Arctic. Journal of Geophysical Research, 2010. doi:10.1029/2009JC005958.">2010</a>]</span>, is the Laplace filter, that is based on computing the second derivatives of the image intensity.</p>
 <div class="math notranslate nohighlight" id="equation-eq-laplace">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-laplace" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-laplace" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{split}
 \mathcal{L}[i,j] &amp;= \frac{1}{N^{+}} \sum_{n=i-1}^{i+1} \sum_{m=j-1}^{j+1}
                        \delta_{\textrm{na}}(n,m) \delta_{\textrm{ice}}(n,m) \delta_1^{i,j}(n,m) \mathcal{I}[n,m] \\
@@ -776,7 +854,7 @@ enhance and stabilize intensity patterns.</p>
 \end{split}\]</div>
 <p>with</p>
 <div class="math notranslate nohighlight" id="equation-eq-laplace2">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq-laplace2" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-laplace2" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \delta_k^{i,j}(n,m) &amp; = &amp; \left\{ \begin{array}{ll} 1 &amp; \mbox{if $|i-n| = k$ or $|j-m| = k$};\\ \nonumber
              0 &amp; \mbox{otherwise}.\end{array} \right.   \\ \nonumber
@@ -795,23 +873,23 @@ over sea ice, <span class="math notranslate nohighlight">\(\delta_{\textrm{ice}}
 <p>In the event when <span class="math notranslate nohighlight">\(N^{+} &lt; 5\)</span> or <span class="math notranslate nohighlight">\(N^{-} &lt; 9\)</span>, not enough pixels are
 available for computing <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> and a missing value is stored at
 grid cell <span class="math notranslate nohighlight">\([i,j]\)</span>.</p>
-</div>
-<div class="section" id="id6">
-<h5>Input data<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id6">
+<h5>Input data<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h5>
 <p>The remapped brightness temperatures on the image grids (16 2D fields).</p>
-</div>
-<div class="section" id="id7">
-<h5>Output data<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id7">
+<h5>Output data<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h5>
 <p>16 2D field of laplacian-filtered brightness temperature on the image grids.</p>
-</div>
-<div class="section" id="id8">
-<h5>Ancillary data<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id8">
+<h5>Ancillary data<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h5>
 <p>The ice/water/land mask on the image grids.</p>
-</div>
-</div>
-</div>
-<div class="section" id="sea-ice-motion-tracking">
-<h3>Sea-ice motion tracking<a class="headerlink" href="#sea-ice-motion-tracking" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="sea-ice-motion-tracking">
+<h3>Sea-ice motion tracking<a class="headerlink" href="#sea-ice-motion-tracking" title="Permalink to this headline">#</a></h3>
 <p>To compute sea-ice drift vectors require two images. A <em>start</em> and an <em>end</em> image. In the near-real-time Level-2 processing context, the end image is the (laplacian filtered) remapped imagery
 from the input Level-1b file. Start images are taken from a running pool of remapped imagery from the previous runs of the sea-ice drift algorithm. In principle, many start images can be selected
 and run into the sea-ice motion tracking against the end image. The difference between the valid time of the start and end imagery determines the drift duration (<em>aka</em> time span) of the Level-2
@@ -827,12 +905,12 @@ total processing time (since each image pair can be processed independently from
 <p>At this stage it is TBD if each (start, end) image pairs results in individual Level-2 product files (better for the latency) or if all the sea-ice drift vectors (with different time spans) are concatenated in a single
 Level-2 product file.</p>
 <p>In any case, the description below is for a single (start, end) image pair, and for each image grid (nh and sh) separately.</p>
-<div class="section" id="select-grid-locations-where-to-apply-the-cmcc-algorithm">
-<h4>Select grid locations where to apply the CMCC algorithm<a class="headerlink" href="#select-grid-locations-where-to-apply-the-cmcc-algorithm" title="Permalink to this headline">¶</a></h4>
+<section id="select-grid-locations-where-to-apply-the-cmcc-algorithm">
+<h4>Select grid locations where to apply the CMCC algorithm<a class="headerlink" href="#select-grid-locations-where-to-apply-the-cmcc-algorithm" title="Permalink to this headline">#</a></h4>
 <p>The CMCC can only be applied where the two swaths (start and end images) overlap over sea ice. A first step in the processing is thus to go through all the positions in the <code class="docutils literal notranslate"><span class="pre">(n,s)h_ease2-250</span></code> grid and test if
 there is sufficient overlap between the two images, and if the overlap is over sea ice.</p>
-<div class="section" id="logical-description">
-<h5>Logical description<a class="headerlink" href="#logical-description" title="Permalink to this headline">¶</a></h5>
+<section id="logical-description">
+<h5>Logical description<a class="headerlink" href="#logical-description" title="Permalink to this headline">#</a></h5>
 <p>For each grid position in the Level-2 product grid, the following tests are performed.</p>
 <p>Masking of land pixel (step 1)</p>
 <ul class="simple">
@@ -849,24 +927,24 @@ the grid locations whose start and end blocks are not entirely over ice.</p></li
 Discard the grid locations whose blocks hold missing data.</p></li>
 </ul>
 <p>The positions that are not discarded after those three steps are passed to the next processing step (CMCC).</p>
-</div>
-<div class="section" id="id10">
-<h5>Input data<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id10">
+<h5>Input data<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h5>
 <p>The two (start and end) ice/ocean/land masks on the image grid <code class="docutils literal notranslate"><span class="pre">(n,s)h_ease2-005</span></code>.</p>
 <p>The two (start and end) laplacian-filtered brightness temperature maps on the image grid <code class="docutils literal notranslate"><span class="pre">(n,s)h_ease2-005</span></code>.</p>
 <p>The diameter of the sub-image (<em>aka</em> image block) to be used in the CMCC, in number of pixels.</p>
 <p>The definition of the Level-2 product grid <code class="docutils literal notranslate"><span class="pre">(n,s)h_ease2-025</span></code>.</p>
-</div>
-<div class="section" id="id11">
-<h5>Output data<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id11">
+<h5>Output data<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h5>
 <p>A 2D field of status flags recording the status at the end of this selection step (in particular recording where and why CMCC will not be attempted).</p>
-</div>
-</div>
-<div class="section" id="run-the-cmcc-algorithm">
-<h4>Run the CMCC algorithm<a class="headerlink" href="#run-the-cmcc-algorithm" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="run-the-cmcc-algorithm">
+<h4>Run the CMCC algorithm<a class="headerlink" href="#run-the-cmcc-algorithm" title="Permalink to this headline">#</a></h4>
 <p>The CMCC is the core sea-ice motion algorithm</p>
-<div class="section" id="id12">
-<h5>Mathematical description<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h5>
+<section id="id12">
+<h5>Mathematical description<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h5>
 <p>We note <span class="math notranslate nohighlight">\(\mathcal{L}_0(x,y)[i]\)</span> the <span class="math notranslate nohighlight">\(i^{th}\)</span> pixel of the <em>start</em>
 sub-image centred at point <span class="math notranslate nohighlight">\((x,y)\)</span>, extracted from the <span class="math notranslate nohighlight">\(\mathcal{L}_0\)</span>
 image. <span class="math notranslate nohighlight">\((x,y)\)</span> are the coordinates expressed in the underpinning EASE2
@@ -885,7 +963,7 @@ projection (units km).</p>
 <span class="math notranslate nohighlight">\(\sigma ( \mathcal{L}_1(u,v) )\)</span>.</p>
 <p>The match between a start and a stop sub-image is evaluated via the correlation metric:</p>
 <div class="math notranslate nohighlight" id="equation-eq-rho">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq-rho" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-rho" title="Permalink to this equation">#</a></span>\[
 \rho(x,y,\delta_x,\delta_y) =
 \frac{
 \sum_{i=1}^{N} (\mathcal{L}_0(x,y)[i]-\langle \mathcal{L}_0(x,y) \rangle) (\mathcal{L}_1(x+\delta_x,y+\delta_y)[i]-\langle \mathcal{L}_1(x+\delta_x,y+\delta_y) \rangle)
@@ -901,7 +979,7 @@ the drift vector.</p>
 computed from bi-linear interpolations of the pixels of <span class="math notranslate nohighlight">\(\mathcal{L}_1\)</span>.
 For example, <span class="math notranslate nohighlight">\(\mathcal{L}_1(u,v)[i]\)</span> is given by:</p>
 <div class="math notranslate nohighlight" id="equation-eq-imginterp">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-imginterp" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-imginterp" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{split}
 \mathcal{L}_1(u,v)[i] &amp; = (1 - \epsilon_{u}) \times (1 - \epsilon_{v}) \times \mathcal{L}_1(\bar{u},\bar{v})[i] \\
         &amp;+  (1 - \epsilon_{u}) \times \epsilon_{v} \times  \mathcal{L}_1(\bar{u},\bar{v}+s_{v})[i] \\
@@ -924,7 +1002,7 @@ vectors from a pair of images.</p>
 <p>Finding the motion vector <span class="math notranslate nohighlight">\((\delta_x,\delta_y)\)</span> at position <span class="math notranslate nohighlight">\((x,y)\)</span> can
 be expressed as the following maximisation problem:</p>
 <div class="math notranslate nohighlight" id="equation-eq-maximonech">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq-maximonech" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-maximonech" title="Permalink to this equation">#</a></span>\[
 \max_{(x,y)\in\mathcal{D}} \rho(x,y,\delta_x,\delta_y)
 \]</div>
 <p>which is solved at all grid positions where the motion vector is searched for (see previous step). Each optimisation is conducted independently
@@ -934,7 +1012,7 @@ problem with domain constraint.</p>
 (fwd-fwd, fwd-bck, bck-fwd, and fwd-bck) for each of Ku-V, Ku-H, Ka-V, and Ka-H considering the foward and backward scans as separate images. Following <span id="id13">Lavergne <em>et al.</em> [<a class="reference internal" href="references.html#id19" title="Thomas Lavergne, Steinar Eastwood, Zakaria Teffah, Harald Schyberg, and Lars-Anders Breivik. Sea ice motion from low resolution satellite sensors: an alternative method and its validation in the Arctic. Journal of Geophysical Research, 2010. doi:10.1029/2009JC005958.">2010</a>]</span>
 we implement an inplicit merging of the information content of the 16 imaging channels by maximizing a sum of cross-correlation functions:</p>
 <div class="math notranslate nohighlight" id="equation-eq-maxim">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq-maxim" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-maxim" title="Permalink to this equation">#</a></span>\[
 \max_{(x,y)\in\mathcal{D}} \frac{1}{N_{ch}} \sum_{c=1}^{c=N_{ch}} \rho^{c}(x,y,\delta_x,\delta_y)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(N_{ch}\)</span> is the number of channels (<span class="math notranslate nohighlight">\(N_{ch} = 16\)</span>).</p>
@@ -942,10 +1020,12 @@ we implement an inplicit merging of the information content of the 16 imaging ch
 chosen since it is simple to implement and does not require computing the gradients of the function to be minimized. It furthermore has good convergence
 and computational properties in problems with low dimensionality <span id="id15">[<a class="reference internal" href="references.html#id18" title="Jeffrey C. Lagarias, James A. Reeds, Margaret H. Wright, and Paul E. Wright. Convergence properties of the Nelder-Mead simplex method in low dimensions. SIAM Journal on Optimization, 9:112–147, 1998.">Lagarias <em>et al.</em>, 1998</a>]</span>.</p>
 <p>Starting points for the optimisation are sampled on a length-angle regular grid around point <span class="math notranslate nohighlight">\((0,0)\)</span> as on <a class="reference internal" href="#fig-startpoints"><span class="std std-numref">Fig. 4</span></a>.</p>
-<div class="figure align-default" id="fig-startpoints">
+<figure class="align-default" id="fig-startpoints">
 <a class="reference internal image-reference" href="_images/CMCC_startpoints.png"><img alt="_images/CMCC_startpoints.png" src="_images/CMCC_startpoints.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Initialization points for the Nelder-Mead algorithm, chosen on a regular length-angle grid aroung point <span class="math notranslate nohighlight">\((0,0)\)</span>.</span><a class="headerlink" href="#fig-startpoints" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Initialization points for the Nelder-Mead algorithm, chosen on a regular length-angle grid aroung point <span class="math notranslate nohighlight">\((0,0)\)</span>.</span><a class="headerlink" href="#fig-startpoints" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The length increment is set to <span class="math notranslate nohighlight">\(10\)</span>km and the angular increment to
 <span class="math notranslate nohighlight">\(45^{\circ}\)</span>. The circle has radius <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>, the maximum drift
 distance defining <span class="math notranslate nohighlight">\(\mathcal{D}\)</span>.</p>
@@ -958,7 +1038,7 @@ optimisation.</p>
 knowledge we bring to the optimisation problem. Its purpose is to limit
 the search area for the solution vector during the optimisation process. It is defined by a centre point <span class="math notranslate nohighlight">\((x_c,y_c)\)</span> and radius <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-domain">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq-domain" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-domain" title="Permalink to this equation">#</a></span>\[
 (\delta_x,\delta_y) \in \mathcal{D}_{x_c,y_c} \Leftrightarrow d(x_c,y_c;\delta_x,\delta_y) &lt; \mathbf{L}
 \]</div>
 <p>In Eq. <a class="reference internal" href="#equation-eq-domain">(7)</a>, <span class="math notranslate nohighlight">\(d(x_c,y_c;\delta_x,\delta_y)\)</span> is the distance
@@ -970,7 +1050,7 @@ optimisation. It is initially set to <span class="math notranslate nohighlight">
 abrupt and non-linear behaviour. <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is instead implemented as a <em>soft</em> constraint based on a
 mono-dimensional sigmoid function <span class="math notranslate nohighlight">\(W(d)\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-sigmoid">
-<span class="eqno">(8)<a class="headerlink" href="#equation-eq-sigmoid" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-sigmoid" title="Permalink to this equation">#</a></span>\[
 W(d)   = \frac{1}{1 + e^{k(d - \mathbf{L})}} 
 \]</div>
 <p>In Eq. <a class="reference internal" href="#equation-eq-sigmoid">(8)</a>, <span class="math notranslate nohighlight">\(k\)</span> is a parameter controlling the steepness
@@ -981,7 +1061,7 @@ remaining smooth and continuous.</p>
 <p>Eq. <a class="reference internal" href="#equation-eq-penalising">(9)</a> illustrate how the penalty is applied to the correlation function
 <span class="math notranslate nohighlight">\(\rho^c(x,y,\delta_x,\delta_y)\)</span> (Eq. <a class="reference internal" href="#equation-eq-maxim">(6)</a>).</p>
 <div class="math notranslate nohighlight" id="equation-eq-penalising">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eq-penalising" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-penalising" title="Permalink to this equation">#</a></span>\[
 \rho^c_D(x,y,\delta_x,\delta_y) = (\rho^c(x,y,\delta_x,\delta_y) + 1) \times W(d(x_c,y_c;\delta_x,\delta_y)) - 1
 \]</div>
 <p><a class="reference internal" href="#fig-sigmoids"><span class="std std-numref">Fig. 5</span></a> plots a mono-dimensional example of applying a sigmoid penalty function
@@ -989,11 +1069,13 @@ to a synthetic correlation function. Evaluations for <span class="math notransla
 are dominated by the correlation value <span class="math notranslate nohighlight">\(\rho(x)\)</span> while those occurring
 outside the domain (<span class="math notranslate nohighlight">\(x\)</span> larger than <span class="math notranslate nohighlight">\(L\)</span>) return very bad scores, that is
 close to <span class="math notranslate nohighlight">\(-1\)</span>.</p>
-<div class="figure align-default" id="fig-sigmoids">
+<figure class="align-default" id="fig-sigmoids">
 <a class="reference internal image-reference" href="_images/sigmoids.png"><img alt="_images/sigmoids.png" src="_images/sigmoids.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Example soft constraint implemented with a sigmoid penalisation function <span class="math notranslate nohighlight">\(W\)</span> and its application on a synthetic,
-mono-dimensional correlation signal <span class="math notranslate nohighlight">\(\rho\)</span>. Here, the <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> parameter is <span class="math notranslate nohighlight">\(1.3\)</span> and <span class="math notranslate nohighlight">\(k\)</span> is <span class="math notranslate nohighlight">\(20\)</span>.}</span><a class="headerlink" href="#fig-sigmoids" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Example soft constraint implemented with a sigmoid penalisation function <span class="math notranslate nohighlight">\(W\)</span> and its application on a synthetic,
+mono-dimensional correlation signal <span class="math notranslate nohighlight">\(\rho\)</span>. Here, the <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> parameter is <span class="math notranslate nohighlight">\(1.3\)</span> and <span class="math notranslate nohighlight">\(k\)</span> is <span class="math notranslate nohighlight">\(20\)</span>.}</span><a class="headerlink" href="#fig-sigmoids" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In Eq. <a class="reference internal" href="#equation-eq-penalising">(9)</a>, <span class="math notranslate nohighlight">\(\rho_D\)</span> is the penalised correlation function. Finding the maximum
 of <span class="math notranslate nohighlight">\(\rho_D\)</span> is taken as a proxy for solving the original, constrained,
 optimisation problem of Eq. <a class="reference internal" href="#equation-eq-maxim">(6)</a>. <span class="math notranslate nohighlight">\(\rho_D\)</span> is the function entering the Nelder-Mead
@@ -1002,22 +1084,22 @@ algorithm instead of <span class="math notranslate nohighlight">\(\rho\)</span>.
 <span class="math notranslate nohighlight">\(v_{max}\)</span>, multiplied by the time separation between the valid times of the two images
 <span class="math notranslate nohighlight">\(\mathbf{T}_1\)</span> - <span class="math notranslate nohighlight">\(\mathbf{T}_0\)</span>. <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> is thus the maximum
 expected straight-line distance that can be covered in the given time.</p>
-</div>
-<div class="section" id="id16">
-<h5>Input data<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id16">
+<h5>Input data<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h5>
 <p>The diameter of the sub-image (<em>aka</em> image block) to be used in the CMCC, in number of pixels.</p>
 <p>The maximum allowed drift speed <span class="math notranslate nohighlight">\(v_{max}\)</span> (to define <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>) and \mathcal{D}).</p>
 <p>The 8 imagery bands for the start and end images, as well as the associated valid times <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>.</p>
-</div>
-<div class="section" id="id17">
-<h5>Output data<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id17">
+<h5>Output data<a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h5>
 <p>A 2D field of drift vectors (<span class="math notranslate nohighlight">\(\delta_x\)</span> and <span class="math notranslate nohighlight">\(\delta_y\)</span> components) on the <code class="docutils literal notranslate"><span class="pre">(n,s)h_ease2-250</span></code> grid.</p>
 <p>A 2D field of maximum cross-correlation value for each vector.</p>
 <p>A 2D field of status flags recording the status at the end of the CMCC optimization.</p>
-</div>
-</div>
-<div class="section" id="quality-control-detect-and-correct-outliers-rogue-vectors">
-<h4>Quality Control: detect and correct outliers (“rogue” vectors)<a class="headerlink" href="#quality-control-detect-and-correct-outliers-rogue-vectors" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="quality-control-detect-and-correct-outliers-rogue-vectors">
+<h4>Quality Control: detect and correct outliers (“rogue” vectors)<a class="headerlink" href="#quality-control-detect-and-correct-outliers-rogue-vectors" title="Permalink to this headline">#</a></h4>
 <p>Once the CMCC described above has been applied once to each of the
 start positions selected by the preliminary checks, a filtering step
 is taken to detect, correct or remove obviously erroneous vectors (so called “rogue” vectors).</p>
@@ -1036,8 +1118,8 @@ tested upon. Otherwise, a new CMCC motion tracking optimisation is triggered.</p
 section, except that the validity domain <span class="math notranslate nohighlight">\(\mathbf{D}\)</span> is adapted (center and radius) to translate the new constraint.</p>
 <p>Erroneous vectors are detected and corrected one by one, from the “most erroneous” (see below) until
 all vectors are either corrected or flagged as bad.</p>
-<div class="section" id="id18">
-<h5>Mathematical description<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h5>
+<section id="id18">
+<h5>Mathematical description<a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h5>
 <p>Let <span class="math notranslate nohighlight">\(\Delta_{\textrm{avg}}\)</span> be the distance between the tip of the
 current drift vector <span class="math notranslate nohighlight">\((\delta_x,\delta_y)\)</span> and the tip of the zonal
 average drift vector
@@ -1050,12 +1132,14 @@ domain is then the disc with centre
 Neighbouring vectors with a maximum correlation value of less than <span class="math notranslate nohighlight">\(0.5\)</span> are not
 used, to avoid degrading the average drift field with possibly wrong
 estimates.</p>
-<div class="figure align-default" id="fig-filter">
+<figure class="align-default" id="fig-filter">
 <a class="reference internal image-reference" href="_images/filter.png"><img alt="_images/filter.png" src="_images/filter.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Example case where the current drift vector (in red) is obviously erroneous, considered the smoother vector field from the first estimate from
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Example case where the current drift vector (in red) is obviously erroneous, considered the smoother vector field from the first estimate from
 CMCC (in black). The locally averaged vector field is plotted in green. <span class="math notranslate nohighlight">\(\Delta^{\textrm{avg}}\)</span> is the length of the dashed red line.
-The red disc has radius <span class="math notranslate nohighlight">\(\Delta^{\textrm{avg}}_{\textrm{max}}\)</span> and is the validity domain $\mathbf{D} that is used to re-optimise the drift vector.</span><a class="headerlink" href="#fig-filter" title="Permalink to this image">¶</a></p>
-</div>
+The red disc has radius <span class="math notranslate nohighlight">\(\Delta^{\textrm{avg}}_{\textrm{max}}\)</span> and is the validity domain $\mathbf{D} that is used to re-optimise the drift vector.</span><a class="headerlink" href="#fig-filter" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><a class="reference internal" href="#fig-filter"><span class="std std-numref">Fig. 6</span></a> illustrates a typical case where a single erroneous vector is surrounded by a smooth vector field. Since the central estimate is not used in the
 average, isolated wrong vectors stand out very easily in terms of their <span class="math notranslate nohighlight">\(\Delta_{\textrm{avg}}\)</span>.</p>
 <p>During this second CMCC optimisation, the search for the maximum is limited to the area eclosed by the red circle. If a satisfying maximum
@@ -1073,24 +1157,24 @@ vectors around an erroneous estimate are not modified before the latter is actua
 <p>In the case where the new optimization does not lead to an acceptable maximum cross-correlation value (value below the threshold, non-convergence of the CMCC with the new contraint),
 the vector position is recorded as non-feasible in the status flags, and the fields of drift vectors get a fill value.</p>
 <p>This detection / correction process continues until all vectors are either corrected or flagged as non-feasible.</p>
-</div>
-<div class="section" id="id19">
-<h5>Input data<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id19">
+<h5>Input data<a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h5>
 <p>The 2D field of drift vectors (<span class="math notranslate nohighlight">\(\delta_x\)</span> and <span class="math notranslate nohighlight">\(\delta_y\)</span> components) on the <code class="docutils literal notranslate"><span class="pre">(n,s)h_ease2-250</span></code> grid from the initial CMCC run.</p>
 <p>The 2D field of maximum cross-correlation value for each vector from the initial CMCC run.</p>
 <p>The 2D field of status flags recording the status at the end of the initial CMCC optimization.</p>
-</div>
-<div class="section" id="id20">
-<h5>Output data<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="id20">
+<h5>Output data<a class="headerlink" href="#id20" title="Permalink to this headline">#</a></h5>
 <p>Updates:</p>
 <p>The 2D field of drift vectors (<span class="math notranslate nohighlight">\(\delta_x\)</span> and <span class="math notranslate nohighlight">\(\delta_y\)</span> components) on the <code class="docutils literal notranslate"><span class="pre">(n,s)h_ease2-250</span></code> grid from the initial CMCC run.</p>
 <p>The 2D field of maximum cross-correlation value for each vector from the initial CMCC run.</p>
 <p>The 2D field of status flags recording the status at the end of the initial CMCC optimization.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1104,7 +1188,7 @@ the vector position is recorded as non-feasible in the status flags, and the fie
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1114,9 +1198,11 @@ the vector position is recorded as non-feasible in the status flags, and the fie
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="L2_product_definition.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1132,31 +1218,35 @@ the vector position is recorded as non-feasible in the status flags, and the fie
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      By Thomas Lavergne and Emily Down, Norwegian Meteorological Institute<br/>
-    
-      <div class="extra_footer">
-        <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Thomas Lavergne and Emily Down, Norwegian Meteorological Institute<br/>
+  
+    <div class="extra_footer">
+      <p>
 This ATBD was developed in the context of the ESA-funded CIMR DEVALGO study (2022-2024) (contract 4000137493).
 <br>
 ESA is not responsible in any way for the content of this document.
 </p>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
