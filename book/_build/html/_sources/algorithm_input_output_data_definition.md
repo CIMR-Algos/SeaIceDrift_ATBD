@@ -7,7 +7,7 @@ Except for the input L1B TB data, the auxiliary and output data are all on {term
 | Field | Description | Shape/Amount |
 | ---   | ----------- | ------------ |
 | L1B TB | L1B Brightness Temperature at KU and KA-bands (both H and V polarization) | full swath or section of it (Nscans, Npos) |
-| L1B NeΔT | Radiometric accuracy of the channels | full swath or section of it (Nscans, Npos) |
+| L1B NeΔT | Random radiometric uncertainty of the channels | full swath or section of it (Nscans, Npos) |
 
 ## Output data
 
